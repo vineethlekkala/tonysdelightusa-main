@@ -56,4 +56,5 @@ const handler = serverless(app, {
   },
 });
 
-export default handler;
+// Use CommonJS export for Vercel compatibility
+module.exports = handler;

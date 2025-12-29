@@ -28,7 +28,6 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
   isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
   mod
 ));
-var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
 // node_modules/depd/index.js
 var require_depd = __commonJS({
@@ -35046,11 +35045,6 @@ var require_nodemailer = __commonJS({
 });
 
 // api-src/index.ts
-var index_exports = {};
-__export(index_exports, {
-  default: () => index_default
-});
-module.exports = __toCommonJS(index_exports);
 var import_config = require("dotenv/config");
 var import_express = __toESM(require_express2(), 1);
 var import_serverless_http = __toESM(require("serverless-http"), 1);
@@ -51959,7 +51953,7 @@ var handler = (0, import_serverless_http.default)(app, {
     await setupApp();
   }
 });
-var index_default = handler;
+module.exports = handler;
 /*! Bundled license information:
 
 depd/index.js:
