@@ -1,15 +1,22 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import { 
+import {
   ArrowRight,
   Users,
   Heart,
   Handshake,
   Phone
 } from "lucide-react";
+import { usePageMeta } from "@/hooks/usePageMeta";
 
 export default function About() {
+  usePageMeta({
+    title: "About Us | Tony's Delight USA - Premium Food Importers & Distributors",
+    description: "Learn about Tony's Delight USA - a family-run importer and distributor bringing premium international food products to the United States market.",
+    ogImage: "https://tonysdelight.com/opengraph.jpg"
+  });
+
   return (
     <div className="min-h-screen overflow-x-hidden bg-white">
       <section className="relative py-24 md:py-32 overflow-hidden bg-[#F8F8F8]">

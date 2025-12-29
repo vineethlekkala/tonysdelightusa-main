@@ -3,8 +3,15 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ImportedBrandsGrid } from "@/components/ImportedBrandsGrid";
 import { ArrowRight } from "lucide-react";
+import { usePageMeta } from "@/hooks/usePageMeta";
 
 export default function ImportedBrands() {
+  usePageMeta({
+    title: "Imported Brands | Tony's Delight USA - International Food Brands",
+    description: "Explore our selection of trusted international food brands available for wholesale distribution across the United States. Contact us for partnership opportunities.",
+    ogImage: "https://tonysdelight.com/opengraph.jpg"
+  });
+
   return (
     <div className="min-h-screen overflow-x-hidden bg-white">
       <section className="relative py-20 md:py-24 bg-[#F8F8F8]">

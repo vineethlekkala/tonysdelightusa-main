@@ -1,8 +1,15 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Mail, Users, Send, MessageSquare, Briefcase } from "lucide-react";
+import { usePageMeta } from "@/hooks/usePageMeta";
 
 export default function Jobs() {
+  usePageMeta({
+    title: "Jobs & Careers | Tony's Delight USA - Join Our Team",
+    description: "Join Tony's Delight USA. We're looking for talented people in wholesale sales, operations, logistics, warehousing, and brand support. View open positions.",
+    ogImage: "https://tonysdelight.com/opengraph.jpg"
+  });
+
   return (
     <div className="min-h-screen bg-white">
       <section className="relative py-20 md:py-24 bg-[#F8F8F8]">

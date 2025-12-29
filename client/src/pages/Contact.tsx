@@ -9,6 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
 import { MapPin, Phone, Mail, Loader2, Instagram, Globe } from "lucide-react";
+import { usePageMeta } from "@/hooks/usePageMeta";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name is required"),
@@ -19,9 +20,15 @@ const formSchema = z.object({
 });
 
 export default function Contact() {
+  usePageMeta({
+    title: "Contact Us | Tony's Delight USA - Wholesale Enquiries",
+    description: "Contact Tony's Delight USA for wholesale and distribution enquiries. Phone: +1 (512) 737-2956 | Email: info@tonysdelight.com | Austin, Texas",
+    ogImage: "https://tonysdelight.com/opengraph.jpg"
+  });
+
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {

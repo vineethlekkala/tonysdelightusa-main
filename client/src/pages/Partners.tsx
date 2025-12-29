@@ -2,8 +2,15 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Handshake, CheckCircle, Mail, Phone, Users, Package, MessageSquare } from "lucide-react";
+import { usePageMeta } from "@/hooks/usePageMeta";
 
 export default function Partners() {
+  usePageMeta({
+    title: "Partners | Tony's Delight USA - Why Work With Us",
+    description: "Partner with Tony's Delight USA for reliable wholesale food distribution. Relationship driven, quality focused, and built for long-term partnerships.",
+    ogImage: "https://tonysdelight.com/opengraph.jpg"
+  });
+
   const benefits = [
     { title: "Relationship Driven", desc: "We prioritize long-term partnerships over one-off transactions." },
     { title: "Consistency Matters", desc: "We focus on reliable sourcing, packaging, and repeatable standards." },

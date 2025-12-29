@@ -7,6 +7,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { Filter, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Link } from "wouter";
+import { usePageMeta } from "@/hooks/usePageMeta";
 
 const CATEGORIES = [
   { label: "All", href: "/products" },
@@ -33,10 +34,46 @@ export default function Products({ initialCategory }: ProductsProps) {
   const [location, setLocation] = useLocation();
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
-  
+
   const query = new URLSearchParams(location.split("?")[1]);
   const activeCategory = initialCategory || query.get("category") || "All";
   const categoryIntro = CATEGORY_INTROS[activeCategory] || "Browse our categories below. For wholesale availability and distribution enquiries, contact us.";
+
+  // Dynamic meta tags based on category
+  const getMetaForCategory = (category: string) => {
+    const metaMap: { [key: string]: { title: string; description: string } } = {
+      "Dry Products": {
+        title: "Dry Products | Tony's Delight USA - Wholesale Pantry Staples",
+        description: "Browse our selection of premium dry products and pantry staples for wholesale distribution. Contact us for availability and pack sizes."
+      },
+      "Frozen Products": {
+        title: "Frozen Products | Tony's Delight USA - Wholesale Frozen Foods",
+        description: "Premium frozen food products for wholesale partners. Quality assured cold-chain handling. Contact us for wholesale enquiries."
+      },
+      "Seafood": {
+        title: "Seafood | Tony's Delight USA - Wholesale Seafood Distribution",
+        description: "Carefully sourced seafood products for wholesale distribution across the United States. Contact us for current availability."
+      },
+      "Imported Brands": {
+        title: "Imported Brands | Tony's Delight USA - International Food Brands",
+        description: "Trusted international food brands available for wholesale distribution in the United States. Contact us for partnership opportunities."
+      },
+      "Lal Qilla Basmati": {
+        title: "Lal Qilla Basmati Rice | Tony's Delight USA - Premium Basmati Wholesale",
+        description: "Premium Lal Qilla basmati rice for wholesale and distribution partners. Contact us for pack sizes and availability."
+      },
+      "All": {
+        title: "Products | Tony's Delight USA - Wholesale Food Distribution",
+        description: "Browse our complete range of premium international food products for wholesale and distribution across the United States."
+      }
+    };
+    return metaMap[category] || metaMap["All"];
+  };
+
+  usePageMeta({
+    ...getMetaForCategory(activeCategory),
+    ogImage: "https://tonysdelight.com/opengraph.jpg"
+  });
 
   useEffect(() => {
     setLoading(true);

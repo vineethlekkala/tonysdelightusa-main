@@ -2,8 +2,15 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Shield, Package, Tag, Thermometer, FileCheck, Mail } from "lucide-react";
+import { usePageMeta } from "@/hooks/usePageMeta";
 
 export default function Quality() {
+  usePageMeta({
+    title: "Quality & Compliance | Tony's Delight USA - Our Standards",
+    description: "Learn about Tony's Delight USA quality standards, sourcing practices, packaging requirements, and compliance approach for wholesale food distribution.",
+    ogImage: "https://tonysdelight.com/opengraph.jpg"
+  });
+
   const sections = [
     {
       icon: Package,

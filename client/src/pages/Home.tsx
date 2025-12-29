@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { cn } from "@/lib/utils";
 import { ImportedBrandsGrid } from "@/components/ImportedBrandsGrid";
+import { usePageMeta } from "@/hooks/usePageMeta";
 
 const defaultHeroImage = "https://res.cloudinary.com/dy5aj3j06/image/upload/v1765475216/a90484e0-ea0b-40fc-a17f-3ef1fad9d763.png";
 
@@ -164,8 +165,14 @@ interface HomepageImage {
 }
 
 export default function Home() {
+  usePageMeta({
+    title: "Tony's Delight USA | Imported Foods Wholesale & Distribution",
+    description: "Tony's Delight USA imports and distributes premium international food products across the United States. Wholesale and distribution enquiries welcome.",
+    ogImage: "https://tonysdelight.com/opengraph.jpg"
+  });
+
   const containerRef = useRef<HTMLDivElement>(null);
-  
+
   const [heroImage, setHeroImage] = useState(defaultHeroImage);
   const [dryProducts, setDryProducts] = useState<Product[]>([]);
   const [dryLoading, setDryLoading] = useState(true);

@@ -2,8 +2,15 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Globe, Target, Truck, Palette, ShoppingCart, Mail, Users, CheckCircle } from "lucide-react";
+import { usePageMeta } from "@/hooks/usePageMeta";
 
 export default function ForBrands() {
+  usePageMeta({
+    title: "For Brands | Tony's Delight USA - U.S. Market Entry Support",
+    description: "International food brands seeking U.S. market entry? Tony's Delight USA provides distribution guidance, market positioning, and operational alignment support.",
+    ogImage: "https://tonysdelight.com/opengraph.jpg"
+  });
+
   const whoFor = [
     "Based outside the United States",
     "Preparing for or exploring U.S. market entry",

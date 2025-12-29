@@ -4,6 +4,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { HelpCircle, Mail } from "lucide-react";
+import { usePageMeta } from "@/hooks/usePageMeta";
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -61,6 +62,12 @@ const faqSchema = {
 };
 
 export default function FAQ() {
+  usePageMeta({
+    title: "FAQ | Tony's Delight USA - Wholesale & Distribution Questions",
+    description: "Frequently asked questions about Tony's Delight USA wholesale and distribution services. Learn about our products, ordering process, and partnerships.",
+    ogImage: "https://tonysdelight.com/opengraph.jpg"
+  });
+
   useEffect(() => {
     const script = document.createElement("script");
     script.type = "application/ld+json";
