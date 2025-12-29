@@ -1,5 +1,9 @@
 {
-  "includeFiles": "dist/**",
+  "functions": {
+    "api/index.js": {
+      "includeFiles": "dist/public/**"
+    }
+  },
   "rewrites": [
     {
       "source": "/(.*)",
