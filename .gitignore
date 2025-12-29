@@ -5,9 +5,6 @@ server/public
 vite.config.ts.*
 *.tar.gz
 
-# Built API handler for Vercel
-api/index.js
-
 # Environment variables
 .env
 .env.local
