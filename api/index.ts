@@ -1,13 +1,17 @@
+import serverless from "serverless-http";
 import { setupApp } from "../server/index";
 
-let appPromise: Promise<any> | null = null;
+let handler: any = null;
 
-export default async function handler(req: any, res: any) {
-  // Initialize app once and reuse across requests
-  if (!appPromise) {
-    appPromise = setupApp();
+async function getHandler() {
+  if (!handler) {
+    const app = await setupApp();
+    handler = serverless(app);
   }
+  return handler;
+}
 
-  const app = await appPromise;
-  return app(req, res);
+export default async function (req: any, res: any) {
+  const h = await getHandler();
+  return h(req, res);
 }
