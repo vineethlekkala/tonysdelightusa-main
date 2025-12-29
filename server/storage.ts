@@ -38,21 +38,36 @@ export class MemStorage implements IStorage {
   }
 
   async getHomepageImage(slotId: string): Promise<HomepageImage | undefined> {
-    const result = await db
-      .select()
-      .from(homepageImages)
-      .where(eq(homepageImages.slotId, slotId))
-      .limit(1);
-    return result[0];
+    if (!db) return undefined;
+    try {
+      const result = await db
+        .select()
+        .from(homepageImages)
+        .where(eq(homepageImages.slotId, slotId))
+        .limit(1);
+      return result[0];
+    } catch (error) {
+      console.error("Error fetching homepage image:", error);
+      return undefined;
+    }
   }
 
   async getAllHomepageImages(): Promise<HomepageImage[]> {
-    return await db.select().from(homepageImages);
+    if (!db) return [];
+    try {
+      return await db.select().from(homepageImages);
+    } catch (error) {
+      console.error("Error fetching all homepage images:", error);
+      return [];
+    }
   }
 
   async upsertHomepageImage(data: InsertHomepageImage): Promise<HomepageImage> {
+    if (!db) {
+      throw new Error("Database not configured - cannot manage homepage images");
+    }
     const existing = await this.getHomepageImage(data.slotId);
-    
+
     if (existing) {
       const updated = await db
         .update(homepageImages)
@@ -74,6 +89,9 @@ export class MemStorage implements IStorage {
   }
 
   async deleteHomepageImage(slotId: string): Promise<void> {
+    if (!db) {
+      throw new Error("Database not configured - cannot manage homepage images");
+    }
     await db
       .delete(homepageImages)
       .where(eq(homepageImages.slotId, slotId));
