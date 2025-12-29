@@ -1,9 +1,5 @@
 {
-  "functions": {
-    "api/index.cjs": {
-      "includeFiles": "dist/**"
-    }
-  },
+  "includeFiles": "dist/**",
   "rewrites": [
     {
       "source": "/(.*)",
