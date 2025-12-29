@@ -9,8 +9,8 @@ import { createServer } from "http";
 const app = express();
 const httpServer = createServer(app);
 
-// Serve static files
-app.use(express.static(path.join(__dirname, "../dist/public")));
+// Serve static files (use process.cwd() for Vercel serverless compatibility)
+app.use(express.static(path.join(process.cwd(), "dist/public")));
 
 app.use(
   express.json({
@@ -39,11 +39,11 @@ async function setupApp() {
   registerBotSnapshots(app);
 
   // Serve static files from dist/public in production
-  app.use(express.static(path.join(__dirname, "../dist/public")));
+  app.use(express.static(path.join(process.cwd(), "dist/public")));
 
   // SPA fallback
   app.get("*", (_req, res) => {
-    res.sendFile(path.join(__dirname, "../dist/public/index.html"));
+    res.sendFile(path.join(process.cwd(), "dist/public/index.html"));
   });
 
   isSetup = true;

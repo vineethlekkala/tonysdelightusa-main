@@ -1,7 +1,7 @@
 {
   "functions": {
-    "api/**/*.ts": {
-      "runtime": "@vercel/node@3.2.21"
+    "api/index.ts": {
+      "includeFiles": "dist/public/**"
     }
   },
   "rewrites": [
