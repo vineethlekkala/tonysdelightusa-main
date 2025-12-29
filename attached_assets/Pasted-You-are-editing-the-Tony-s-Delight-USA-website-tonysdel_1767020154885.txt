@@ -1,0 +1,177 @@
+You are editing the Tony’s Delight USA website (tonysdelight.com). We are using Vite + React (SPA) with an Express backend (server/index.ts). We want to improve SEO + AI search visibility (including ChatGPT Search) WITHOUT migrating frameworks and WITHOUT paid services.
+
+ABSOLUTE RULES
+1) Do NOT redesign the UI, layout, styling, or change existing page content.
+2) Do NOT remove any existing routes, links, footer items, Instagram links, analytics tags, or sitemap.
+3) Do NOT refactor the app or change the SPA router (wouter).
+4) Make minimal server-side additions only.
+5) After implementing, provide a clear report: files changed/added, and how to test.
+
+GOAL (Phase 1 + Phase 2)
+Phase 1
+A) Add/confirm robots.txt at /robots.txt (HTTP 200) with explicit allowances for AI search bots and sitemap reference.
+B) Add llms.txt at /llms.txt (HTTP 200) as a plain-text AI-friendly index of key pages.
+
+Phase 2
+C) Implement bot-aware server-side HTML snapshots for a small set of key routes so bots that do NOT execute JavaScript can still read meaningful HTML.
+D) Humans must still get the normal SPA (index.html fallback). Do NOT break the existing SPA behavior.
+
+PHASE 1 REQUIREMENTS
+
+1) robots.txt
+- Serve at https://tonysdelight.com/robots.txt with Content-Type text/plain
+- Use this exact content (unless the framework requires tiny formatting changes):
+
+User-agent: *
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: bingbot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: GPTBot
+Disallow: /
+
+Sitemap: https://tonysdelight.com/sitemap.xml
+
+Notes:
+- This allows AI search crawlers but blocks GPTBot (training) only.
+- Do not block the whole site.
+
+2) llms.txt
+- Serve at https://tonysdelight.com/llms.txt with Content-Type text/plain
+- Use this content:
+
+Tony’s Delight USA is a wholesale and distribution company supporting food and consumer packaged goods brands in the United States.
+
+Primary pages:
+- https://tonysdelight.com/
+- https://tonysdelight.com/products
+- https://tonysdelight.com/partners
+- https://tonysdelight.com/quality
+- https://tonysdelight.com/faq
+- https://tonysdelight.com/for-brands
+- https://tonysdelight.com/jobs
+- https://tonysdelight.com/contact
+
+Global presence:
+- https://tonysdelight.co.uk
+- https://tonysdelighteu.com
+
+PHASE 2 REQUIREMENTS (BOT HTML SNAPSHOTS)
+
+We need bots to receive simple, crawlable HTML for these routes:
+- /
+- /partners
+- /quality
+- /faq
+- /for-brands
+
+Implementation rules:
+1) Do NOT touch the React pages for this phase.
+2) Implement in Express BEFORE the SPA catch-all fallback (the "*" handler that sends index.html).
+3) Detect bots by User-Agent using a conservative list that includes:
+   - OAI-SearchBot
+   - ChatGPT-User
+   - bingbot
+   - Googlebot
+   - facebookexternalhit
+   - WhatsApp
+   - Twitterbot
+   - Slackbot
+   - Discordbot
+   - LinkedInBot
+4) Only serve snapshots for GET and HEAD requests that accept text/html.
+5) For non-bots (normal users), continue to serve the SPA exactly as before.
+
+Snapshot content:
+- Create static HTML files in a new folder (example: server/snapshots/).
+- One file per route:
+  - home.html
+  - partners.html
+  - quality.html
+  - faq.html
+  - for-brands.html
+
+Each snapshot HTML must:
+- Be a complete HTML document (doctype, html, head, body).
+- Include a unique <title> and <meta name="description"> for that page.
+- Include canonical link to the exact page URL.
+- Include one clear <h1>.
+- Include 2–6 short paragraphs that summarize the page content in plain text.
+- Include a small “Key links” list linking to the main pages.
+- Not rely on JavaScript to display the content.
+- Not include heavy CSS. Minimal inline styling is okay but not necessary.
+
+Use these page-specific titles/descriptions and text (keep wording professional and consistent with existing site; you can lightly adjust but do not change meaning):
+
+1) / (home.html)
+Title: Tony’s Delight USA | Wholesale & Distribution
+Description: Tony’s Delight USA is a wholesale and distribution partner for premium international food products across the United States.
+Body summary should mention:
+- Wholesale distribution focus in the United States
+- Categories: dry, frozen, seafood, imported brands
+- Contact info@tonysdelight.com and +1 (512) 737-2956
+- Links to Partners, Products, Quality, FAQ, Jobs, Contact
+
+2) /partners (partners.html)
+Title: Partners | Tony’s Delight USA
+Description: Work with Tony’s Delight USA for wholesale and distribution partnerships built on quality, consistency, and long-term trust.
+Body summary should mention:
+- Who we work with: distributors, retailers, foodservice, brands
+- Why work with us: consistency, communication, quality standards
+- CTA to email info@tonysdelight.com
+
+3) /quality (quality.html)
+Title: Quality & Compliance | Tony’s Delight USA
+Description: Tony’s Delight USA focuses on quality standards, reliable sourcing, and responsible handling for wholesale distribution.
+Body summary should mention:
+- Sourcing standards, packaging, labeling, cold chain (where applicable)
+- Compliance awareness and documentation requests via info@tonysdelight.com
+
+4) /faq (faq.html)
+Title: FAQ | Tony’s Delight USA
+Description: Frequently asked questions about Tony’s Delight USA wholesale and distribution.
+Body summary should include a few Q/A bullets:
+- Wholesale focus (not direct-to-consumer)
+- How to place orders (email)
+- MOQ varies
+- Regions served (building footprint)
+- Contact details
+
+5) /for-brands (for-brands.html)
+Title: For Brands | Tony’s Delight USA
+Description: Tony’s Delight USA supports international food and CPG brands exploring U.S. market entry, distribution, branding, and Amazon enablement.
+Body summary should mention:
+- Select international brands, U.S. market entry support
+- Distribution/logistics guidance, branding feedback, Amazon enablement
+- “Selective and thoughtful partnerships” language
+- CTA to contact via info@tonysdelight.com and /contact
+
+Routing behavior:
+- If bot + path match, serve the corresponding snapshot file with status 200 and Content-Type text/html.
+- For HEAD requests, respond with headers only (or let Express handle HEAD automatically).
+- Otherwise continue to the existing static middleware and SPA fallback.
+
+DELIVERABLE / VERIFICATION
+After implementing, provide:
+1) Files added/changed and what each does.
+2) Confirm these URLs return 200:
+   - /robots.txt
+   - /llms.txt
+   - /sitemap.xml
+3) Explain how to test bot snapshots locally:
+   - Example curl with a bot UA, e.g.
+     curl -A "OAI-SearchBot" -I https://tonysdelight.com/partners
+     curl -A "OAI-SearchBot" https://tonysdelight.com/partners
+4) Confirm normal users still see the SPA (no visible change).
+
+Do NOT proceed beyond Phase 1 and Phase 2. No additional SEO changes in this pass.

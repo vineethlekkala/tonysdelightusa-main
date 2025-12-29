@@ -1,0 +1,194 @@
+THE PERFECT REPLIT AI PROMPT (Copy/Paste This)
+
+Replit, create a full Node.js + Express backend inside my Replit workspace.
+Follow these instructions EXACTLY:
+
+✅ 1. FOLDER STRUCTURE TO CREATE
+
+Inside the root:
+
+server/
+  package.json
+  .env
+  src/
+    server.js
+    routes/
+      products.js
+    services/
+      googleSheetsService.js
+    config/
+      google-service-account.json   (DO NOT overwrite; use the file already uploaded)
+
+
+If a folder already exists, reuse it — DO NOT delete anything.
+
+✅ 2. INSTALL DEPENDENCIES
+
+Inside the server folder, install:
+
+npm install express googleapis dotenv cors node-cache
+
+✅ 3. CREATE package.json
+
+Inside server/package.json:
+
+{
+  "name": "tonys-delight-backend",
+  "version": "1.0.0",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "googleapis": "^131.0.0",
+    "node-cache": "^5.1.2"
+  }
+}
+
+✅ 4. CREATE .env FILE
+
+Create a file: server/.env
+
+Put this inside:
+
+PORT=4000
+GOOGLE_SHEET_ID=PASTE_MY_SHEET_ID_HERE
+GOOGLE_SERVICE_ACCOUNT_KEY_PATH=./src/config/google-service-account.json
+CACHE_TTL_SECONDS=300
+
+
+(Do NOT overwrite the JSON file I already uploaded.)
+
+✅ 5. CREATE server/src/server.js
+const express = require("express");
+const cors = require("cors");
+require("dotenv").config();
+
+const productsRouter = require("./routes/products");
+
+const app = express();
+const PORT = process.env.PORT || 4000;
+
+app.use(cors());
+app.use(express.json());
+
+app.get("/", (req, res) => {
+  res.send("Tony's Delight API is running");
+});
+
+app.use("/api/products", productsRouter);
+
+app.listen(PORT, () => {
+  console.log(`API running at http://localhost:${PORT}`);
+});
+
+✅ 6. CREATE server/src/routes/products.js
+const express = require("express");
+const router = express.Router();
+
+const {
+  getAllProducts,
+  getProductsByCategory,
+} = require("../services/googleSheetsService");
+
+router.get("/", async (req, res) => {
+  try {
+    const products = await getAllProducts();
+    res.json({ success: true, products });
+  } catch (err) {
+    res.status(500).json({ success: false, message: err.message });
+  }
+});
+
+router.get("/:category", async (req, res) => {
+  try {
+    const products = await getProductsByCategory(req.params.category);
+    res.json({ success: true, products });
+  } catch (err) {
+    res.status(500).json({ success: false, message: err.message });
+  }
+});
+
+module.exports = router;
+
+✅ 7. CREATE server/src/services/googleSheetsService.js
+const { google } = require("googleapis");
+const NodeCache = require("node-cache");
+const path = require("path");
+require("dotenv").config();
+
+const cache = new NodeCache({ stdTTL: Number(process.env.CACHE_TTL_SECONDS) || 300 });
+
+const sheetId = process.env.GOOGLE_SHEET_ID;
+const keyFilePath = process.env.GOOGLE_SERVICE_ACCOUNT_KEY_PATH;
+
+const auth = new google.auth.GoogleAuth({
+  keyFile: path.resolve(keyFilePath),
+  scopes: ["https://www.googleapis.com/auth/spreadsheets.readonly"],
+});
+
+const sheets = google.sheets({ version: "v4", auth });
+
+async function getAllProducts() {
+  const cacheKey = "allProducts";
+
+  const cached = cache.get(cacheKey);
+  if (cached) return cached;
+
+  const response = await sheets.spreadsheets.values.get({
+    spreadsheetId: sheetId,
+    range: "Sheet1!A2:D",
+  });
+
+  const rows = response.data.values || [];
+
+  const products = rows.map(([ImageURL, Title, Description, Category]) => ({
+    imageUrl: ImageURL || "",
+    title: Title || "",
+    description: Description || "",
+    category: Category || "",
+  }));
+
+  cache.set(cacheKey, products);
+  return products;
+}
+
+async function getProductsByCategory(category) {
+  const all = await getAllProducts();
+  return all.filter(
+    (p) => p.category.toLowerCase() === category.toLowerCase()
+  );
+}
+
+module.exports = {
+  getAllProducts,
+  getProductsByCategory,
+};
+
+✅ 8. ENSURE JSON FILE IS NOT REPLACED
+
+DO NOT delete or overwrite:
+
+server/src/config/google-service-account.json
+
+
+Just keep it.
+
+❗ IMPORTANT
+
+When Replit AI finishes writing everything:
+
+👉 Run the backend manually:
+
+cd server
+npm install
+npm start
+
+
+Test API:
+
+https://your-replit-url/api/products

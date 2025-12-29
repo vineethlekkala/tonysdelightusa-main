@@ -1,0 +1,120 @@
+Apply a balanced LIGHT DARK THEME across the entire website, WITHOUT modifying the navbar.
+
+=====================================================
+### THEME REQUIREMENTS (IMPORTANT)
+=====================================================
+Keep the NAVBAR exactly as it is (pure white, fixed).
+
+Convert the rest of the website to a premium, soft-dark theme:
+
+COLORS:
+- Main background: #1A1D21 (soft dark grey)
+- Section background: #202328 or #26292E
+- Cards: #2C2F34 with soft shadow
+- Headings: #FFFFFF
+- Body text: #C9C9C9
+- Accent color: #F97316 (orange)
+
+Remove:
+- Bright white blocks
+- Harsh black areas
+- Neon gold effects
+
+=====================================================
+### PRODUCT PAGES
+=====================================================
+Apply soft-dark theme:
+
+- Background: #1A1D21
+- Sidebar: #23262B, white text
+- Active category button → #F97316 with white text
+- Product cards → #2C2F34, subtle shadow, white text
+
+=====================================================
+### HOME PAGE
+=====================================================
+Convert all sections to soft-dark theme:
+
+- Hero: #1A1D21
+- Content sections: #202328
+- Cards: #2C2F34
+- Text: white
+
+DO NOT modify navbar.
+
+=====================================================
+### IMPORTED BRANDS PAGE
+=====================================================
+- Background: #1A1D21
+- Brand cards: #2C2F34
+- Text: white
+- Search bar: #2C2F34 with white text
+
+=====================================================
+### ABOUT / JOBS / CONTACT PAGES
+=====================================================
+Apply the same soft-dark theme:
+
+- Background: #1A1D21
+- Section blocks: #202328
+- Cards: #2C2F34
+- Text: white
+
+=====================================================
+### CONTACT FORM — ENABLE EMAIL SENDING
+=====================================================
+
+Add backend functionality so that when the user clicks **Send Message**, the form sends an email to:
+
+📩 info@tonysdelight.co.uk
+
+Include these fields:
+- Name  
+- Company  
+- Email  
+- Phone  
+- Message  
+
+Implement using Node.js + Nodemailer.
+
+BACKEND REQUIREMENTS:
+1. Create POST route:
+   POST /api/send-message
+
+2. Use Gmail SMTP via Nodemailer:
+   host: "smtp.gmail.com"
+   port: 587
+   secure: false
+   auth:
+      user: "info@tonysdelight.co.uk"
+      pass: process.env.GMAIL_APP_PASSWORD
+
+3. Email format:
+   Subject: "New Message from Tony's Delight UK Website"
+   Body: include all form fields.
+
+4. Frontend:
+   - Capture form submit
+   - POST JSON to /api/send-message
+   - On success → show: “Message sent successfully!”
+   - On failure → show: “Unable to send message. Try WhatsApp instead.”
+
+SECURITY:
+- Use environment variable for Gmail App Password
+- Never hardcode the password in code
+
+=====================================================
+### DO NOT MODIFY
+=====================================================
+- Navbar
+- Product routes
+- Google Sheets integration
+- Logo rendering
+
+=====================================================
+### UPDATE THESE FILES
+=====================================================
+- styles.css  
+- contact.html / Contact component  
+- server.js  
+- script.js  

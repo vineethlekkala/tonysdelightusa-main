@@ -1,0 +1,115 @@
+Perfect — NOW we can replace the hero image **cleanly and safely** using this Cloudinary URL:
+
+```
+https://res.cloudinary.com/dy5aj3j06/image/upload/v1765475216/a90484e0-ea0b-40fc-a17f-3ef1fad9d763.png
+```
+
+You will get **two things**:
+
+---
+
+# ✅ 1. **THE EXACT CODE YOU WILL USE IN `Home.tsx`**
+
+Find the hero image in:
+
+```
+client/src/pages/Home.tsx
+```
+
+It likely looks something like:
+
+```tsx
+<img
+  src="OLD_IMAGE_URL"
+  alt="Hero"
+  className="w-full h-auto object-cover rounded-2xl shadow-lg"
+/>
+```
+
+➡ **Replace ONLY the src with your Cloudinary URL**
+
+### ✔ Updated Code:
+
+```tsx
+<img
+  src="https://res.cloudinary.com/dy5aj3j06/image/upload/v1765475216/a90484e0-ea0b-40fc-a17f-3ef1fad9d763.png"
+  alt="Tony's Delight Hero"
+  className="w-full h-auto object-cover rounded-2xl shadow-lg"
+/>
+```
+
+⚠️ *Do NOT change the container, GSAP animations, OR any layout.*
+⚠️ *Replace ONLY the image.*
+
+---
+
+# ✅ 2. **THE FULL REPLIT AI PROMPT (Copy–Paste EXACTLY)**
+
+Here is the complete, safe, ready-to-run prompt:
+
+---
+
+# 🚀 **REPLIT AI PROMPT — Replace Hero Image Only (Cloudinary Source)**
+
+**Replit, please update ONLY the hero image on the homepage.
+Do NOT change any animations, layout, GSAP logic, text, or any other code.
+Only replace the image source URL.**
+
+### ✔ Replace the current chapati/food plate hero image with this Cloudinary URL:
+
+```
+https://res.cloudinary.com/dy5aj3j06/image/upload/v1765475216/a90484e0-ea0b-40fc-a17f-3ef1fad9d763.png
+```
+
+### ✔ Find the image used inside `client/src/pages/Home.tsx`
+
+(or whichever file contains the hero visual).
+
+### ✔ Keep the SAME:
+
+* className
+* layout
+* wrapper elements
+* animations
+* scroll behavior
+* responsiveness
+
+### ❗ Only modify this part:
+
+```tsx
+<img
+  src="OLD_IMAGE_URL"
+  alt="Hero"
+  className="..."
+/>
+```
+
+### ✔ Replace with:
+
+```tsx
+<img
+  src="https://res.cloudinary.com/dy5aj3j06/image/upload/v1765475216/a90484e0-ea0b-40fc-a17f-3ef1fad9d763.png"
+  alt="Tony's Delight Hero"
+  className="w-full h-auto object-cover rounded-2xl shadow-lg"
+/>
+```
+
+### ✔ Do NOT modify anything else on the homepage.
+
+After updating, confirm:
+
+> “The hero image has been replaced with the new Cloudinary image.”
+
+---
+
+# 🎉 You're ready!
+
+Paste this prompt into Replit AI, and your homepage hero image will update safely.
+
+If you want, I can also:
+
+✅ Fix its aspect ratio
+✅ Add subtle fade/zoom animation
+✅ Sync it with GSAP scroll transitions
+
+Just say: **“Enhance the hero image animation”**.

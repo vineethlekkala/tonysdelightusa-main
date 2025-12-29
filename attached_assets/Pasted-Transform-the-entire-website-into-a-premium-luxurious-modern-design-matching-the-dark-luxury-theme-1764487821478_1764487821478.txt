@@ -1,0 +1,130 @@
+Transform the entire website into a premium, luxurious, modern design matching the dark luxury theme shown in my screenshot.
+
+#############################################
+### GLOBAL LUXURY DESIGN SYSTEM
+#############################################
+Apply a global redesign across ALL pages (Home, About, Products, Brands, Contact, Jobs):
+
+1. Replace all plain backgrounds with:
+   - Dark navy gradient (#0B1220 → #111827)
+   - Soft radial gold glows (#F7C948 at low opacity)
+   - Subtle patterned overlay (very faint + signs or dots)
+
+2. Typography:
+   - Headings: Large, elegant, premium (optical-size sans-serif or geometric font)
+   - Body: Clean, modern, soft white text (#EDEDED)
+   - Spacing: airy, generous padding
+
+3. Buttons:
+   - Primary → Gold gradient (#F7C948 → #E7B32B)
+   - Glow shadow on hover
+   - Rounded-pill modern style
+   - Secondary → Transparent with gold outline
+
+4. Cards (Products, Brands, Categories):
+   - Dark glassmorphism background (rgba(255,255,255,0.04))
+   - Soft border: 1px solid rgba(255,255,255,0.08)
+   - Backdrop-filter: blur(10px)
+   - Golden glow hover effect
+   - Smooth elevation on hover
+
+#############################################
+### HERO SECTION UPGRADE (HOME PAGE)
+#############################################
+Redesign the hero section:
+
+- Remove current food background
+- Add dark luxury gradient background (#0B1220)
+- Add left and right golden blurred light spots (radial-glow)
+- Large elegant heading:
+    “Premium Global Food Wholesale”
+- Subheading in muted white
+- Add luxury buttons:
+    [ Get Wholesale Prices ] → gold gradient
+    [ Contact Us ] → outline + inner glow
+- Add fade-up animations
+
+#############################################
+### CATEGORY SECTIONS (RICE / DRY / FROZEN / SEAFOOD)
+#############################################
+Redesign every category block to feel premium:
+
+1. Background: dark with golden glow corners
+2. Use large elegant category titles
+3. Replace old images with minimal luxury icons or geometric patterns
+4. Add gold accent dividers
+5. Remove any plain white boxes
+6. Turn category items into premium cards (dark glass style)
+7. Keep dynamic product loading, but make product cards:
+   - Dark glass
+   - Glow on hover
+   - Contain, centered images
+   - Gold text highlights
+   - Remove "No products available" text completely
+
+#############################################
+### IMPORTED BRANDS PAGE
+#############################################
+Modify the logo grid cards:
+
+- Dark glass cards with blur
+- White logo centered
+- Gold hover-ring highlight
+- Grid centered on page
+- Remove old white background boxes
+- Use the luxurious dark theme
+
+#############################################
+### ABOUT PAGE
+#############################################
+- Convert plain sections into layered dark sections with gold accents
+- Replace white backgrounds with dark gradient blocks
+- Use golden thin dividers between sections
+- Highlight key points using soft gold text
+- Add subtle scroll animations
+
+#############################################
+### CONTACT / JOBS / FOOTER
+#############################################
+Footer:
+- Dark navy background
+- Gold links + icons
+- Elegant spacing
+- Add soft radial golden glow behind logo
+
+Contact and Jobs pages:
+- Dark glass forms
+- Gold accent input borders
+- Luxury input focus glow
+
+#############################################
+### DO NOT MODIFY BACKEND OR DATA LOGIC
+#############################################
+Keep:
+- API routes
+- Google Sheet integration
+- Dynamic product loading
+- Brand logo logic
+- Navbar links structure
+
+Modify ONLY:
+- HTML layout
+- CSS global theme
+- UI components
+- Animations
+- Visual style
+
+#############################################
+### FILES TO UPDATE
+#############################################
+- index.html
+- about.html
+- imported-brands.html
+- all category pages
+- styles.css (major redesign)
+- script.js (only for animations if needed)
+
+#############################################
+### GOAL
+#############################################
+Make the entire website look premium, luxurious, modern, elegant, and consistent with the dark gold theme shown in the screenshot.

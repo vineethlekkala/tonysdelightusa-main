@@ -1,0 +1,119 @@
+Update the website to correctly handle Imported Brand logos across the homepage and the Imported Brands page.
+
+###############################################
+### PART 1 — HOMEPAGE BRAND LOGOS
+###############################################
+On the homepage, create a small “Featured Brands” section that shows ONLY a selected set of brand logos.
+
+Show only these logos on the homepage (NOT the full list):
+- Tony’s Delight
+- AROY-D
+- Double Horse
+- Maggi
+- Milo
+- Haldiram
+- Kings
+- FOCO
+
+Design requirements:
+- Use a responsive horizontal slider OR a 4-column grid
+- Rounded cards with soft shadows
+- Logo centered with caption below it
+- Lazy-load all images
+- Place logos in /public/assets/brands/homepage/
+
+###############################################
+### PART 2 — IMPORTED BRANDS PAGE (FULL BRAND GRID)
+###############################################
+In the Imported Brands page:
+- REMOVE the entire "Featured Products", "Our Imported Products", “No products available”, and “Return to Home” sections.
+- Replace them with a FULL responsive logo grid containing ALL brand logos.
+
+Download the brand logos automatically and place them into:
+/public/assets/brands/all/
+
+Include ALL logos from the list below:
+
+Tony’s Delight  
+AROY-D  
+Double Horse  
+Haldiram  
+Kings  
+FOCO  
+Healthy Boy  
+Maggi  
+MILO  
+TRS  
+COCK  
+Mogu Mogu  
+MD  
+SAWAT-D  
+Dettol  
+Nongshim  
+Horlicks  
+Periyar  
+Uni-Eagle  
+VICCO  
+Himalaya  
+Maekrua  
+Spring Home  
+Squid Brand  
+Parle  
+Britannia  
+Shan  
+Shezan  
+Pavizham  
+Dabur  
+Cycle  
+Gits  
+MTR  
+MDH  
+Nestomalt  
+Boost
+
+FULL GRID LAYOUT:
+- 6 columns desktop
+- 4 columns laptop
+- 3 columns tablet
+- 2 columns mobile
+- White cards with shadow + hover lift animation
+- Caption under each logo
+- All images lazy-loaded
+
+###############################################
+### PART 3 — REMOVE OLD IMPORTED PRODUCTS SECTION
+###############################################
+Delete these completely:
+- “Featured Products”
+- “Our Imported Products”
+- “Browse our selection…”
+- “No products available yet”
+- “Return to Home”
+
+This area must show ONLY the brand logos.
+
+###############################################
+### PART 4 — KEEP DYNAMIC CATEGORY PRODUCTS
+###############################################
+Do NOT remove dynamic category pages such as:
+- Dry Products
+- Frozen Products
+- Seafood
+- Lal Qilla Basmati
+
+Leave backend API and Google Sheet integration untouched.
+
+###############################################
+### FILES TO UPDATE
+###############################################
+- index.html (homepage)
+- imported-brands.html (brand page)
+- styles.css
+- script.js (only if JS is used for slider)
+- /public/assets/brands/homepage/ (selected logos)
+- /public/assets/brands/all/ (all logos)
+
+###############################################
+### GOAL
+###############################################
+Make the homepage show ONLY a few key brands, and make the Imported Brands page show ALL brands in a clean, premium, responsive grid with downloaded logo assets.

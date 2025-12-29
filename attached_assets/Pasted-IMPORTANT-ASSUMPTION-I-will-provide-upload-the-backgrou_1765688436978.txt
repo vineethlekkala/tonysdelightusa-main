@@ -1,0 +1,94 @@
+IMPORTANT ASSUMPTION:
+I will provide (upload) the background image, logo, and product images myself.
+DO NOT source or copy any external copyrighted assets.
+
+GOAL:
+Rebuild the HOME PAGE to match the STRUCTURE and VISUAL STYLE of the provided reference,
+using ONLY user-uploaded images and existing site text.
+
+====================================================
+NAVBAR (MATCH STRUCTURE EXACTLY)
+====================================================
+
+1. Create a navbar with the SAME SHAPE, POSITIONING, and SPACING as the reference:
+   - Centered logo placeholder area
+   - Navigation links aligned exactly like the reference
+   - Transparent / overlay-style navbar over the background
+
+2. Add a LOGO PLACEHOLDER:
+   - Fixed-size container
+   - Accepts uploaded logo image
+   - Maintains aspect ratio
+   - Easily replaceable (single image upload)
+
+3. Keep existing menu text and routes unchanged.
+
+====================================================
+BACKGROUND
+====================================================
+
+1. Use the BACKGROUND IMAGE I UPLOAD as-is.
+2. DO NOT modify, blur, recolor, or replace the background.
+3. Background must be fixed and full-screen like the reference.
+
+====================================================
+IMAGE PLACEHOLDERS (VERY IMPORTANT)
+====================================================
+
+Create IMAGE PLACEHOLDERS in the exact same POSITIONS as the reference for:
+
+- Hero product images (e.g. Chicken Party Wings equivalent)
+- Secondary product images (Chicken Breast equivalent)
+- “Our Story” section images
+- Highlight product images
+- Decorative food images
+
+Each placeholder must:
+- Accept image uploads
+- Support drag-and-drop replacement
+- Maintain rotation / tilt if applied
+- Preserve size and position
+
+====================================================
+TEXT STYLE
+====================================================
+
+1. Match the SAME TEXT STYLE:
+   - Chalk / hand-drawn / editorial look
+   - Same hierarchy (big titles, small notes)
+   - Same alignment and spacing
+
+2. DO NOT change:
+   - Any wording
+   - Any headings
+   - Any copy text
+
+====================================================
+ADMIN IMAGE UPLOAD SUPPORT
+====================================================
+
+Add support so I can:
+- Upload images via Admin panel
+- Assign images to:
+  - Hero image slots
+  - Product highlight slots
+  - Our Story images
+- Replace images without code changes
+
+====================================================
+STRICT RULES
+====================================================
+
+DO NOT:
+- Copy any external copyrighted images
+- Change background image I provide
+- Change text content
+- Change routes
+- Change backend logic
+- Change color palette
+
+ONLY:
+- Match layout
+- Match positioning
+- Match visual structure
+- Create upload-ready placeholders

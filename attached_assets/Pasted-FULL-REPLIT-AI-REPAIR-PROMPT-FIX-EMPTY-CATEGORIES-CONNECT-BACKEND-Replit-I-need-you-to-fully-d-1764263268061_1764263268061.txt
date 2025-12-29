@@ -1,0 +1,172 @@
+FULL REPLIT AI REPAIR PROMPT — FIX EMPTY CATEGORIES & CONNECT BACKEND
+
+Replit, I need you to fully diagnose and fix the reason why no products are appearing in the category pages. Right now, my project is in Full-Stack mode but the frontend is still showing nothing. Follow ALL steps below exactly:
+
+🟣 SECTION 1 — FIX FRONTEND MOCK DATA
+✔ Step 1: Open client/src/lib/google-sheets.ts
+
+Replace ALL mock data and MOCK_PRODUCTS with REAL API calls:
+
+export async function fetchAllProducts() {
+  const res = await fetch("/api/products");
+  const json = await res.json();
+  return json.products || [];
+}
+
+export async function fetchProductsByCategory(category: string) {
+  const res = await fetch(`/api/products/${encodeURIComponent(category)}`);
+  const json = await res.json();
+  return json.products || [];
+}
+
+
+Remove ANY mock data and ANY references to MOCK_PRODUCTS.
+
+🟣 SECTION 2 — FIX CATEGORY MAPPING
+✔ Step 2: Open client/src/pages/Products.tsx
+
+Add this mapping at the top:
+
+const CATEGORY_MAP: Record<string, string> = {
+  seafood: "Seafood",
+  "dry-products": "Dry Products",
+  "frozen-products": "Frozen Products",
+  "imported-brands": "Imported Brands",
+  "lal-qilla-basmati": "Lal Qilla Basmati",
+};
+
+
+Use it in the fetch call:
+
+const sheetCategory = CATEGORY_MAP[routeCategory];
+const items = await fetchProductsByCategory(sheetCategory);
+
+
+This ensures frontend routes match Google Sheet categories exactly.
+
+🟣 SECTION 3 — VERIFY BACKEND API ROUTES
+✔ Step 3: Test backend routes:
+GET /api/products
+GET /api/products/Seafood
+GET /api/products/Dry%20Products
+GET /api/products/Frozen%20Products
+GET /api/products/Imported%20Brands
+GET /api/products/Lal%20Qilla%20Basmati
+
+
+If any return empty arrays, log the Sheet data:
+
+Edit server/src/services/googleSheetsService.js:
+
+console.log("Loaded rows from sheet:", rows);
+
+
+This helps confirm whether Google Sheet data is being fetched.
+
+🟣 SECTION 4 — FIX GOOGLE SHEETS ACCESS
+✔ Step 4: Verify:
+
+Sheet name is EXACTLY Sheet1
+
+Columns are EXACTLY:
+
+ImageURL | Title | Description | Category
+
+
+Google Sheet is shared with service account email
+
+.env contains:
+
+GOOGLE_SHEET_ID=correct_sheet_id
+GOOGLE_SERVICE_ACCOUNT_KEY_PATH=./src/config/google-service-account.json
+
+
+If any are incorrect → FIX them.
+
+🟣 SECTION 5 — VALIDATE CLOUDINARY UPLOADS
+✔ Step 5: Open server/src/routes/admin.js
+
+Verify admin upload route:
+
+Uploads to Cloudinary
+
+Appends row to Google Sheet
+
+Returns valid JSON
+
+Add debug logs:
+
+console.log("Received admin upload:", req.body);
+console.log("Uploaded to Cloudinary:", imageUrl);
+console.log("Appended to sheet with category:", category);
+
+🟣 SECTION 6 — UPDATE FRONTEND PRODUCT GRID
+✔ Step 6: Ensure product-card.tsx displays images with:
+<img 
+  src={product.imageUrl} 
+  alt={product.title}
+  loading="lazy"
+  className="w-full h-auto object-cover"
+/>
+
+🟣 SECTION 7 — RUN FULL DIAGNOSTIC AND REPORT
+✔ Step 7: After completing all fixes, generate a full diagnostic report including:
+
+Does /api/products return real data?
+
+Does each category API return correct products?
+
+Are Google Sheet rows loaded correctly?
+
+Does admin upload append rows?
+
+Are Cloudinary URLs valid?
+
+Is the frontend fetching the API?
+
+Are category pages showing products?
+
+Any errors in console?
+
+Any issues with CORS?
+
+Any Sheet permission errors?
+
+Provide a detailed list of what was fixed, what was missing, and final status of:
+
+Cloudinary → Backend → Google Sheet → Frontend
+
+🟣 SECTION 8 — FINAL FIXES
+
+If ANY issue remains:
+
+Correct the Sheet range (“Sheet1!A2:D”)
+
+Correct category comparison logic
+
+Fix JSON key path
+
+Fix deployment routing
+
+Adjust CORS config
+
+Fix fetch URLs in frontend
+
+Restart backend
+
+Invalidate cache
+
+Ensure Replit server URL is used in production mode
+
+📌 FINAL INSTRUCTIONS FOR REPLIT AI
+
+Apply ALL fixes directly to the project.
+Return a COMPLETE SUMMARY of:
+
+What was broken
+
+What was fixed
+
+Current working status
+
+Any remaining steps

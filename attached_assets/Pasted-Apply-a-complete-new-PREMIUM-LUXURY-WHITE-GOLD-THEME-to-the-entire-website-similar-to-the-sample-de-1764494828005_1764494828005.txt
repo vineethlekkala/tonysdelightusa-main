@@ -1,0 +1,159 @@
+Apply a complete new PREMIUM LUXURY WHITE-GOLD THEME to the entire website, similar to the sample design provided (white + soft black curved shapes + luxury gold accents). DO NOT use orange anywhere. DO NOT modify the navbar (keep it pure white and fixed).
+
+===============================================
+### 1. GLOBAL DESIGN STYLE
+===============================================
+Use this design palette across all pages:
+
+- Pure white (#FFFFFF)
+- Off-white (#F7F7F7)
+- Soft charcoal black (#1A1A1C or #111213) only for curved sections
+- Luxury gold (#D5B982 or #C9A86A)
+- Light grey (#E9E9E9)
+
+Remove ALL orange, dark black backgrounds, neon colors, and previous dark themes.
+
+Typography:
+- Headings: #111 (rich black)
+- Body text: #444
+- Gold only for small highlights (NOT large text)
+
+Cards:
+- White cards with soft shadows (0 4px 20px rgba(0,0,0,0.06))
+- Rounded corners (18–24px)
+- Gold border (1–2px) optional
+
+Buttons:
+- Gold gradient (#D5B982 → #C9A86A)
+- White text
+- Rounded pill shape
+
+===============================================
+### 2. HOMEPAGE – USE MY ORIGINAL TEXT
+===============================================
+Replace the sample “Chef’s Special – Freshness in Every Bite” with the ORIGINAL homepage dialogue:
+
+HEADING:
+Premium Global Food Wholesale
+
+SUBTEXT:
+Your trusted partner for premium seafood, dry products, and frozen foods.
+
+BUTTONS:
+[ Get Wholesale Prices ] – gold
+[ Contact Us ] – outline gold
+
+Hero Layout:
+- Left side: text + buttons on white background
+- Right side: curved soft-black shape (#111213)
+- Center: product or warehouse image in circular container
+- Add floating leaves, spices, or product pieces around it with subtle shadow
+- Use modern curved shapes like the provided design
+
+===============================================
+### 3. APPLY THE NEW THEME TO ALL PAGES
+===============================================
+Apply curved white/black section designs + gold highlights to:
+
+- About Us
+- Dry Products
+- Frozen Products
+- Seafood
+- Imported Brands
+- Lal Qilla Basmati
+- Jobs
+- Contact
+
+Each page should use:
+- White main background
+- Curved soft-black sections as accents (NOT entire page)
+- Gold labels and small decorations
+- Floating food or ingredient elements
+- Clean luxury spacing and typography
+
+===============================================
+### 4. PRODUCT CATEGORY PAGES
+===============================================
+Dry / Frozen / Seafood / Basmati:
+
+- Remove dark full backgrounds
+- Use white background with curved black accents at top or section breaks
+- Category sidebar = white with gold active state
+- Product cards = white, round, shadowed, with gold border emphasis
+- Product titles = #111, minimal, clean
+
+===============================================
+### 5. IMPORTED BRANDS PAGE
+===============================================
+- White background
+- Brand cards = white with thin gold border
+- Hover = soft gold glow
+- Search bar = white with gold outline
+- Remove all dark themes
+
+===============================================
+### 6. ABOUT / CONTACT / JOBS PAGES
+===============================================
+- Use white luxury theme
+- Insert curved black areas as section separators
+- Gold icons and accents
+- White cards with gold edges
+
+===============================================
+### 7. CONTACT FORM (IMPORTANT)
+===============================================
+Keep the new design BUT ensure the form is styled in luxury white-gold:
+
+- Inputs: white with gold borders
+- Button: gold gradient
+- Label text: #111
+- Background: white
+
+EMAIL FUNCTIONALITY:
+When user submits contact form:
+
+→ Send email to: info@tonysdelight.co.uk
+
+Implement using Nodemailer:
+
+POST /api/send-message
+{
+   name,
+   company,
+   email,
+   phone,
+   message
+}
+
+Use Gmail SMTP:
+  host: "smtp.gmail.com"
+  port: 587
+  secure: false
+  auth:
+    user: "info@tonysdelight.co.uk"
+    pass: process.env.GMAIL_APP_PASSWORD
+
+Show success message: “Message sent successfully!”
+On error: “Unable to send email. Try WhatsApp.”
+
+===============================================
+### 8. DO NOT MODIFY
+===============================================
+- Navbar (keep pure white, fixed)
+- Backend product loading
+- Google Sheets integration
+- Logo logic
+
+===============================================
+### 9. FILES TO UPDATE
+===============================================
+- ALL HTML pages
+- styles.css (complete redesign)
+- small JS updates for animations & floating elements
+- server.js (for email route)
+- script.js (contact form submission)
+
+===============================================
+### GOAL
+===============================================
+Transform the entire website into a PREMIUM, MODERN, LUXURY white-gold curved aesthetic identical to the reference style, while keeping my original homepage heading/subheading text.

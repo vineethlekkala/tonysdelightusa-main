@@ -1,0 +1,131 @@
+Redesign ONLY the About page (about.html, styles.css, script.js) to make it fully responsive, more modern, visually appealing, and premium — similar to tonysdelighteu.com.
+
+IMPORTANT:
+- Do not modify the backend.
+- Do not modify other pages.
+- Do not modify navbar or footer.
+- Only redesign the About page layout, visuals, and styling.
+
+###############################################
+### OVERALL GOAL
+###############################################
+Make the About page look:
+- Premium
+- Corporate and trustworthy
+- Clean and modern
+- With better structure
+- Fully responsive on mobile, tablet, and desktop
+- With soft animation on scroll
+- With layered sections and depth
+
+###############################################
+### HERO SECTION REDESIGN
+###############################################
+Replace the plain blue header with:
+- A full-width banner with a dark overlay
+- A natural food or warehouse image background
+- Centered white heading + subtitle
+- Smooth fade-in animation
+- Responsive scaling
+
+Example:
+- Height: 45–55vh
+- Text vertically centered
+
+###############################################
+### MAIN CONTENT REDESIGN
+###############################################
+
+1. INTRO PARAGRAPH
+- Center-align
+- Limit width to 900px max
+- Add soft fade-up animation
+- Improve spacing
+
+2. "Who We Are" + "Our Story" SECTION
+Replace the basic two-column layout with a more modern layout:
+
+- Left column: text block (Who We Are)
+- Right column: a soft card with rounded corners, shadow, and icons (Our Story)
+- Add floating abstract shapes behind the right card (yellow/blue blobs)
+- Add scroll animation (slide-in left/right)
+- Ensure both columns stack nicely on mobile
+
+3. ICON STATS (20+ years, EU presence, 1000s clients)
+Make a modern stat row with:
+- Premium icons
+- Large bold numbers
+- Small sublabels
+- Even spacing
+- Horizontal on desktop / vertical on mobile
+- Soft hover effects
+
+###############################################
+### MISSION & VISION SECTION
+###############################################
+Create a beautiful split-section:
+
+- Left: Mission block with icon
+- Right: Vision block with icon
+- Add diagonal background or faint shapes
+- Use contrasting but clean colors
+- On mobile, stack vertically
+
+###############################################
+### WHAT WE'RE KNOWN FOR SECTION
+###############################################
+Add a modern list-with-icons layout:
+
+- Each bullet point gets a checkmark or icon
+- Two-column grid on desktop
+- One-column grid on mobile
+- Add fade-in on scroll
+
+###############################################
+### SEAFOOD & INDIAN PRODUCTS FOCUS
+###############################################
+Add a two-column section with visuals:
+
+Left side:
+- Real natural photo (seafood or Indian food)
+- Rounded corners + shadow
+
+Right side:
+- Text about seafood & key Indian SKUs
+- Styled headings
+- Bullet icons
+
+###############################################
+### GLOBAL PRESENCE SECTION
+###############################################
+Create a modern map-style layout:
+
+- Three cards: UK, India, Europe
+- Each with flag icon or marker icon
+- Use equal-sized cards
+- Add hover elevation effect
+- Smooth fade-up animation
+- Full responsiveness
+
+###############################################
+### DESIGN RULES
+###############################################
+- Use white space generously
+- Better typography hierarchy
+- Uniform padding and margins
+- Colors matching brand palette (navy, yellow, white)
+- Shapes: soft blobs like tonysdelighteu.com
+- Light shadows for depth
+- Perfect responsiveness on all screen sizes
+
+###############################################
+### FILES TO UPDATE
+###############################################
+- about.html (new structure)
+- styles.css (new responsive styles + shapes + animations)
+- script.js (scroll animations if needed)
+
+###############################################
+### DO NOT CHANGE ANYTHING ELSE
+###############################################
+Navbar, footer, backend, other pages must remain untouched.

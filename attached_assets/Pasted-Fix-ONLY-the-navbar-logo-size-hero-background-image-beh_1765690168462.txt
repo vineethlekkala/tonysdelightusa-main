@@ -1,0 +1,79 @@
+Fix ONLY the navbar logo size, hero background image behavior, and add smooth transitions.
+
+DO NOT change:
+- Text content
+- Fonts
+- Color palette
+- Page layout or structure
+- Routes
+- Backend or APIs
+- Admin panel
+- Existing buttons or wording
+
+========================================
+1. NAVBAR LOGO SIZE + TRANSITION
+========================================
+
+- Increase the navbar logo size slightly.
+- Set logo height to 60–70px.
+- Width must remain auto (no distortion).
+- Logo stays on the LEFTMOST side of the navbar.
+- Logo remains vertically centered.
+
+Add smooth transitions:
+- Apply CSS transition to logo:
+  transition: transform 0.3s ease, opacity 0.3s ease;
+- On hover:
+  - Slight scale up (1.05)
+  - No color change
+
+========================================
+2. HERO BACKGROUND IMAGE (NO CROPPING)
+========================================
+
+- Ensure the hero background image shows the FULL image.
+- Replace any `background-size: cover`.
+
+Use exactly:
+- background-size: contain;
+- background-repeat: no-repeat;
+- background-position: center center;
+
+- Do NOT stretch or zoom the image.
+- Allow clean empty space if needed to preserve aspect ratio.
+
+========================================
+3. HERO CONTENT TRANSITIONS
+========================================
+
+Add smooth entrance animations on page load:
+- Headline: fade-in + slide-up
+- Subtext: fade-in with slight delay
+- Buttons: staggered fade-in
+
+Use only:
+- transform
+- opacity
+
+Example timing:
+- Duration: 0.6s
+- Ease: ease-out
+
+========================================
+4. SCROLL TRANSITIONS
+========================================
+
+- As user scrolls, sections should:
+  - Fade in
+  - Move up slightly
+- Use lightweight IntersectionObserver or equivalent.
+- Do NOT add heavy animation libraries.
+
+========================================
+EXPECTED RESULT
+========================================
+
+- Logo appears bigger and clearer with subtle hover animation.
+- Hero background image is fully visible with no cropping.
+- Page feels smooth, modern, and premium.
+- No other visual or functional changes occur.

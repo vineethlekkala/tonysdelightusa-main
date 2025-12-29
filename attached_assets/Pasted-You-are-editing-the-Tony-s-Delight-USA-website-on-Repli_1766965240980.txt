@@ -1,0 +1,42 @@
+You are editing the Tony’s Delight USA website on Replit (tonysdelight.com). I need specific updates. Do not redesign, refactor, or remove anything that already exists unless I explicitly ask. Keep all existing styling, layout, spacing, typography, and components the same.
+
+Absolute rules
+1) Do not remove any existing links, icons, sections, components, or functionality.
+2) Do not remove social links or social icons.
+3) Make minimal code changes and only in the files required.
+4) After changes, tell me exactly which files you edited and what you changed.
+
+Goal
+1) Ensure the footer contains correct Our Regions links (USA, UK, EU).
+2) Ensure the footer contains working Instagram links for USA, UK, and EU, using the handles provided.
+
+Requirements
+A) Footer Our Regions
+1) In the existing footer column titled “Our Regions” (or the equivalent existing column), ensure these three region entries exist as clickable links:
+   1) USA: Tony’s Delight USA https://tonysdelight.com
+   2) UK: Tony’s Delight UK https://tonysdelight.co.uk
+   3) EU: Tony’s Delight EU https://tonysdelighteu.com
+2) EU is live. Do not show “coming soon” anywhere.
+3) UK and EU links must open in a new tab and use rel="noopener noreferrer".
+4) Keep the footer layout exactly as it is. Do not change columns, spacing, fonts, colors, or ordering.
+5) Do not modify existing footer links in Quick Links or Contact.
+
+B) Footer Instagram links
+1) Add an Instagram section in the footer without changing the overall footer layout. Use an existing social area if already present. If a social area was removed earlier, restore it where it was.
+2) Add three Instagram links with these exact labels and destinations:
+   1) Instagram USA: @tonysdelightusa https://www.instagram.com/tonysdelightusa/
+   2) Instagram UK: @tonysdelightuk https://www.instagram.com/tonysdelightuk/
+   3) Instagram EU: @tonysdelighteu https://www.instagram.com/tonysdelighteu/
+3) Links should open in a new tab and use rel="noopener noreferrer".
+4) If there are already Instagram icons, keep them and make sure they point to the correct URLs above. Do not delete icons. Do not change icon style. Do not change spacing.
+
+C) Verification
+1) Confirm https://tonysdelight.com loads.
+2) Confirm https://www.tonysdelight.com loads.
+3) Confirm footer region links work.
+4) Confirm the three Instagram links work on desktop and mobile.
+
+Deliverable
+1) List the exact file paths changed.
+2) Summarize exactly what you changed in 5 to 10 lines.
+3) If there are multiple footer components, confirm which one is actually used on the homepage and only edit that one.

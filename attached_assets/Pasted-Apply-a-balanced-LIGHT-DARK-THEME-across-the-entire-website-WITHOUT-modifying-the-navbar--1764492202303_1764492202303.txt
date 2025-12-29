@@ -1,0 +1,136 @@
+Apply a balanced LIGHT DARK THEME across the entire website, WITHOUT modifying the navbar.
+
+=====================================================
+### THEME REQUIREMENTS (IMPORTANT)
+=====================================================
+Keep the NAVBAR exactly as it is (pure white, fixed).
+
+Convert the rest of the website to a premium, soft-dark theme:
+
+COLORS:
+- Main background: #1A1D21 (soft dark grey, NOT full black)
+- Section background: #202328 or #26292E
+- Cards: #2C2F34 with soft shadow
+- Text:
+    Headings: #FFFFFF
+    Subheadings: #E5E5E5
+    Body Text: #C9C9C9
+- Accent color: #F97316 (orange)
+
+Remove any harsh black or bright white backgrounds.
+Remove bright theme leftovers.
+Remove neon gold glows.
+
+Keep UI: minimalist, premium, subtle gradients ONLY in dark tones.
+
+=====================================================
+### PRODUCT PAGES
+=====================================================
+Apply the soft-dark theme:
+
+- Background: #1A1D21
+- Sidebar: #23262B with white text (#FFF)
+- Category buttons:
+    Normal: #2F3238 with light border
+    Active: #F97316 with white text
+- Product cards:
+    Background: #2C2F34
+    Text: white
+    Shadow: subtle dark shadow
+- Remove bright white cards.
+
+=====================================================
+### HOME PAGE
+=====================================================
+Replace all white backgrounds with soft-dark backgrounds:
+
+- Hero section: #1A1D21
+- “Why Choose Us” section: #202328
+- Cards: #2C2F34 with soft blur or shadow
+
+Keep readability high with white text.
+
+DO NOT modify navbar.
+
+=====================================================
+### IMPORTED BRANDS PAGE
+=====================================================
+Apply soft-dark theme:
+
+- Background: #1A1D21
+- Brand cards: #2C2F34
+- Brand text: white
+- Search bar: #2C2F34 with white text
+
+=====================================================
+### ABOUT / JOBS / CONTACT PAGES
+=====================================================
+Apply soft-dark theme:
+
+- Background: #1A1D21
+- Section blocks: #202328
+- Cards: #2C2F34
+- Text: white
+- Remove bright backgrounds
+
+=====================================================
+### CONTACT FORM — ADD EMAIL FUNCTIONALITY
+=====================================================
+
+Add backend logic to send form submissions to THIS email:
+📩 tonyxsper@gmail.com
+
+When user clicks **Send Message**, send an email containing:
+- Name
+- Company
+- Email
+- Phone
+- Message
+
+Implement using Node.js + Nodemailer.
+
+Steps:
+
+1. Create new backend route:
+   POST /api/send-message
+
+2. Use Nodemailer with Gmail SMTP:
+
+   host: "smtp.gmail.com"
+   port: 587
+   secure: false
+   auth:
+      user: "tonyxsper@gmail.com"
+      pass: process.env.GMAIL_APP_PASSWORD
+
+3. Email format:
+   Subject: "New Message from Website"
+   Body: include all fields from form.
+
+4. Frontend:
+   - Attach form submit handler
+   - Send POST request to /api/send-message (JSON)
+   - Show success message: “Message sent successfully!”
+   - If failed: “Unable to send message. Try WhatsApp.”
+
+5. IMPORTANT:
+   - Add .env variable for Gmail app password
+   - DO NOT hardcode password in code
+
+=====================================================
+### DO NOT TOUCH
+=====================================================
+- Navbar
+- Routes
+- API logic for products
+- Google Sheets sync
+- Logo handling
+
+=====================================================
+### FILES TO UPDATE
+=====================================================
+- styles.css (apply soft-dark palette)
+- contact.html / contact section
+- server.js (add Nodemailer route)
+- script.js (form submission)
+

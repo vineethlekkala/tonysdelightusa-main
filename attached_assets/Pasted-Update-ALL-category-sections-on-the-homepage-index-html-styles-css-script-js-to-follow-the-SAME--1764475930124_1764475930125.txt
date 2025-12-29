@@ -1,0 +1,107 @@
+Update ALL category sections on the homepage (index.html, styles.css, script.js) to follow the SAME behavior and layout used for the updated “Frozen Products” and “Seafood” sections.
+
+APPLY THESE RULES TO THE FOLLOWING SECTIONS:
+1. Dry Products
+2. Frozen Products
+3. Seafood
+4. Imported Brands
+5. Lal Qilla Basmati
+
+###########################################
+### GOALS FOR ALL CATEGORY SECTIONS
+###########################################
+
+1. REMOVE all hardcoded content:
+   - Remove preset text, descriptions, or images.
+   - Remove default copy that was originally in these cards.
+
+2. REPLACE category images with REAL, NATURAL images:
+   Use non–AI-generated images.
+   Create these files in:
+/public/assets/categories/
+
+   - dry-products.jpg        (real dry goods: spices, flour, pulses, etc.)
+   - frozen-products.jpg     (real frozen foods)
+   - seafood.jpg             (real seafood)
+   - imported-brands.jpg     (real FMCG import items)
+   - lal-qilla-basmati.jpg   (real basmati rice photo)
+
+   Add lazy-loading to all category images.
+
+3. MAKE ALL SECTIONS FULLY DYNAMIC:
+   For each section:
+   - Fetch products from backend endpoint:
+       /api/products/<CategoryName>
+
+     Example:
+       Dry Products → /api/products/Dry%20Products
+       Frozen Products → /api/products/Frozen%20Products
+       Seafood → /api/products/Seafood
+       Imported Brands → /api/products/Imported%20Brands
+       Lal Qilla Basmati → /api/products/Lal%20Qilla%20Basmati
+
+   - Display ONLY items matching that category from the Google Sheet.
+
+4. PRODUCT CARD LAYOUT (UNIFORM FOR ALL SECTIONS):
+   Each product card MUST include:
+   - Image (Cloudinary URL from ImageURL column)
+   - Title
+   - Description
+
+   Layout must be fully responsive:
+   - 1 column on mobile
+   - 2 columns on tablets
+   - 3 columns on desktops
+   - Clean spacing, consistent padding, soft shadow
+
+5. EMPTY CATEGORY HANDLING:
+   If no products exist for a category:
+   Show:
+   “No products available in this category.”
+
+6. SECTION HEADINGS:
+   Keep the section titles exactly:
+   - Dry Products
+   - Frozen Products
+   - Seafood
+   - Imported Brands
+   - Lal Qilla Basmati
+
+   Under each heading, display the dynamic product grid.
+
+7. DESIGN RULES:
+   - Each category must visually match (uniform styling)
+   - Consistent grid system
+   - Consistent card design
+   - Professional spacing
+   - Lazy-loading for performance
+   - No distortion of images
+   - Keep homepage visual flow clean and modern
+   - Ensure perfect responsiveness
+
+###########################################
+### DO NOT CHANGE:
+###########################################
+- Navbar
+- Footer
+- Hero section
+- Backend logic
+- Other pages (About, Jobs, Contact)
+- Google Sheet integration
+- Scroll animations already in place
+
+###########################################
+### FILES TO UPDATE:
+###########################################
+- index.html (update all 5 category sections)
+- styles.css (unified card/grid/styles)
+- script.js (add fetch calls for each category)
+- /public/assets/categories/*.jpg (replace all category images)
+
+###########################################
+### OUTPUT:
+###########################################
+Provide complete updated, working homepage code that:
+- Uses real images for all categories
+- Shows ONLY dynamic products from the Google Sheet
+- Has a fully unified design across all five sections

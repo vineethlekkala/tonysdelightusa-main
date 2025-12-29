@@ -1,0 +1,309 @@
+REPLIT AI FULL INSTRUCTION PROMPT
+
+Replit, create a complete backend + admin upload system for Tony’s Delight Products with these exact requirements:
+
+📁 1. FOLDER STRUCTURE (CREATE ALL OF THIS)
+server/
+  package.json
+  .env
+  src/
+    server.js
+    routes/
+      products.js
+      admin.js
+    services/
+      googleSheetsService.js
+      cloudinaryService.js
+    config/
+      google-service-account.json   ← do NOT overwrite (file already uploaded)
+client/
+  src/
+    admin/
+      AdminUpload.tsx
+
+
+If a folder already exists, reuse it.
+
+📦 2. SERVER/package.json
+{
+  "name": "tonys-delight-backend",
+  "version": "1.0.0",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "googleapis": "^131.0.0",
+    "node-cache": "^5.1.2",
+    "cloudinary": "^1.40.0"
+  }
+}
+
+🔐 3. SERVER/.env
+PORT=4000
+
+# Google Sheet ID
+GOOGLE_SHEET_ID=PASTE_YOUR_SHEET_ID_HERE
+
+# Path to service account JSON
+GOOGLE_SERVICE_ACCOUNT_KEY_PATH=./src/config/google-service-account.json
+
+# Cloudinary credentials
+CLOUDINARY_CLOUD_NAME=your_cloud_name
+CLOUDINARY_API_KEY=your_api_key
+CLOUDINARY_API_SECRET=your_api_secret
+
+CACHE_TTL_SECONDS=300
+
+
+Do not overwrite google-service-account.json (already uploaded by user).
+
+☁️ 4. CREATE cloudinaryService.js
+
+server/src/services/cloudinaryService.js
+
+const cloudinary = require("cloudinary").v2;
+require("dotenv").config();
+
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
+});
+
+async function uploadImage(base64File) {
+  const res = await cloudinary.uploader.upload(base64File, {
+    folder: "tonys-products",
+    resource_type: "image",
+  });
+  return res.secure_url;
+}
+
+module.exports = { uploadImage };
+
+📑 5. googleSheetsService.js (AUTO APPEND ROW)
+
+server/src/services/googleSheetsService.js
+
+const { google } = require("googleapis");
+const path = require("path");
+require("dotenv").config();
+
+const sheetId = process.env.GOOGLE_SHEET_ID;
+const keyFilePath = process.env.GOOGLE_SERVICE_ACCOUNT_KEY_PATH;
+
+const auth = new google.auth.GoogleAuth({
+  keyFile: path.resolve(keyFilePath),
+  scopes: ["https://www.googleapis.com/auth/spreadsheets"],
+});
+const sheets = google.sheets({ version: "v4", auth });
+
+async function appendProductRow(imageUrl, title, description, category) {
+  await sheets.spreadsheets.values.append({
+    spreadsheetId: sheetId,
+    range: "Sheet1!A:D",
+    valueInputOption: "RAW",
+    requestBody: {
+      values: [[imageUrl, title, description, category]],
+    },
+  });
+}
+
+async function getAllProducts() {
+  const res = await sheets.spreadsheets.values.get({
+    spreadsheetId: sheetId,
+    range: "Sheet1!A2:D",
+  });
+
+  const rows = res.data.values || [];
+  return rows.map(([imageUrl, title, description, category]) => ({
+    imageUrl,
+    title,
+    description,
+    category,
+  }));
+}
+
+async function getProductsByCategory(cat) {
+  const all = await getAllProducts();
+  return all.filter((p) => p.category.toLowerCase() === cat.toLowerCase());
+}
+
+module.exports = {
+  appendProductRow,
+  getAllProducts,
+  getProductsByCategory,
+};
+
+🟦 6. server/src/routes/admin.js
+
+AUTO-ADD PRODUCT
+
+const express = require("express");
+const router = express.Router();
+
+const { uploadImage } = require("../services/cloudinaryService");
+const { appendProductRow } = require("../services/googleSheetsService");
+
+router.post("/upload-product", async (req, res) => {
+  try {
+    const { title, description, category, imageBase64 } = req.body;
+
+    if (!imageBase64) return res.status(400).json({ error: "Missing image" });
+
+    // Upload image to Cloudinary
+    const imageUrl = await uploadImage(imageBase64);
+
+    // Append to Google Sheet
+    await appendProductRow(imageUrl, title, description, category);
+
+    res.json({ success: true, imageUrl });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ success: false, message: err.message });
+  }
+});
+
+module.exports = router;
+
+🟩 7. server/src/routes/products.js
+const express = require("express");
+const router = express.Router();
+
+const {
+  getAllProducts,
+  getProductsByCategory,
+} = require("../services/googleSheetsService");
+
+router.get("/", async (req, res) => {
+  try {
+    res.json({ success: true, products: await getAllProducts() });
+  } catch (err) {
+    res.status(500).json({ success: false, message: err.message });
+  }
+});
+
+router.get("/:category", async (req, res) => {
+  try {
+    res.json({ success: true, products: await getProductsByCategory(req.params.category) });
+  } catch (err) {
+    res.status(500).json({ success: false, message: err.message });
+  }
+});
+
+module.exports = router;
+
+🟥 8. server/src/server.js
+const express = require("express");
+const cors = require("cors");
+require("dotenv").config();
+
+const productsRouter = require("./routes/products");
+const adminRouter = require("./routes/admin");
+
+const app = express();
+const PORT = process.env.PORT || 4000;
+
+app.use(cors());
+app.use(express.json({ limit: "10mb" })); // allow base64 image
+
+app.get("/", (req, res) => res.send("API running..."));
+
+app.use("/api/products", productsRouter);
+app.use("/api/admin", adminRouter);
+
+app.listen(PORT, () => console.log(`Backend running on port ${PORT}`));
+
+🟦 9. Admin Upload Page (React)
+
+Create this file:
+
+client/src/admin/AdminUpload.tsx
+
+import { useState } from "react";
+
+export default function AdminUpload() {
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [category, setCategory] = useState("Seafood");
+  const [imageFile, setImageFile] = useState<File | null>(null);
+
+  async function handleSubmit(e: any) {
+    e.preventDefault();
+
+    if (!imageFile) {
+      alert("Please upload an image");
+      return;
+    }
+
+    const base64 = await toBase64(imageFile);
+
+    const res = await fetch("/api/admin/upload-product", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        title,
+        description,
+        category,
+        imageBase64: base64,
+      }),
+    });
+
+    const json = await res.json();
+    if (json.success) {
+      alert("Uploaded!");
+    }
+  }
+
+  function toBase64(file: File) {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = (e) => reject(e);
+      reader.readAsDataURL(file);
+    });
+  }
+
+  return (
+    <form onSubmit={handleSubmit} style={{ padding: 20 }}>
+      <h2>Upload Product</h2>
+
+      <input
+        type="text"
+        placeholder="Title"
+        onChange={(e) => setTitle(e.target.value)}
+      /><br />
+
+      <textarea
+        placeholder="Description"
+        onChange={(e) => setDescription(e.target.value)}
+      ></textarea><br />
+
+      <select onChange={(e) => setCategory(e.target.value)}>
+        <option>Seafood</option>
+        <option>Dry Products</option>
+        <option>Frozen Products</option>
+        <option>Imported Brands</option>
+        <option>Lal Qilla Basmati</option>
+      </select><br />
+
+      <input type="file" onChange={(e) => setImageFile(e.target.files?.[0] ?? null)} /><br />
+
+      <button type="submit">Upload Product</button>
+    </form>
+  );
+}
+
+🎉 DONE
+
+With this system:
+
+✔ Upload image → Cloudinary
+✔ Auto save to Google Sheet
+✔ Auto appear on your site
+✔ No manual Google Sheet editing
+✔ Completely automated

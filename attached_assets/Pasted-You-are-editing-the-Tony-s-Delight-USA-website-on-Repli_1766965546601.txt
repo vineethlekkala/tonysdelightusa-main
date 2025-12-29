@@ -1,0 +1,164 @@
+You are editing the Tony’s Delight USA website on Replit (tonysdelight.com).
+
+Absolute rules
+1) Do not remove or alter any existing content, links, social icons, Instagram links, or sections.
+2) Do not redesign the site. Keep existing styling, spacing, typography, and components.
+3) Make minimal changes and reuse existing layout components where possible.
+4) Add only what is requested.
+5) After completing, list the exact file paths created/edited and confirm all new routes load.
+
+Goal
+Add these new pages and refine the Jobs page:
+- Partners / Why Work With Us page: /partners
+- FAQ page: /faq
+- Quality & Compliance page: /quality
+- Refine Jobs page copy: /jobs
+
+Also add links to these pages in navigation and footer without removing existing links.
+
+A) Create /partners page
+Meta title: Partners | Tony’s Delight USA
+Meta description: Work with Tony’s Delight USA for wholesale and distribution partnerships built on quality, consistency, and long-term trust.
+
+Page content (use this exact copy, minor formatting allowed to match site components)
+
+Title: Partners
+Intro:
+Tony’s Delight USA partners with wholesalers, retailers, and distributors who want premium international food products backed by consistent standards and responsive communication.
+
+Section: Why Work With Us
+- Relationship Driven: We prioritize long-term partnerships over one-off transactions.
+- Consistency Matters: We focus on reliable sourcing, packaging, and repeatable standards.
+- Wholesale Focused: Our model is built for distributors, retailers, and foodservice buyers.
+- Quality First: We protect the customer experience and avoid shortcuts that compromise trust.
+- Responsive Communication: Clear timelines, quick follow-ups, and practical problem solving.
+
+Section: Who We Work With
+We typically work with:
+- Distributors and wholesale partners
+- Ethnic and specialty grocery retailers
+- Foodservice buyers and restaurant supply partners
+- Brands seeking U.S. distribution partnerships
+
+Section: What to Send Us
+To start a partnership conversation, email info@tonysdelight.com with:
+- Your company name and location
+- The regions you serve
+- The product categories you are interested in
+- Any relevant volume expectations or distribution goals
+
+Section: Call to Action
+For wholesale and distribution enquiries, contact us at info@tonysdelight.com or visit the Contact page.
+
+Buttons/links
+- Primary CTA button: Contact Us -> /contact
+- Secondary CTA: Email info@tonysdelight.com -> mailto:info@tonysdelight.com
+
+B) Create /faq page
+Meta title: FAQ | Tony’s Delight USA
+Meta description: Frequently asked questions about Tony’s Delight USA wholesale and distribution.
+
+Page content (use this exact copy, minor formatting allowed)
+
+Title: FAQ
+Intro:
+Below are answers to common questions about Tony’s Delight USA. For wholesale enquiries, contact us at info@tonysdelight.com.
+
+FAQ items
+1) Do you sell directly to consumers?
+At this time, Tony’s Delight USA is focused on wholesale and distribution partnerships.
+
+2) How do I place a wholesale order?
+Email info@tonysdelight.com with your company details, the categories you are interested in, and your delivery region.
+
+3) Do you have minimum order quantities (MOQ)?
+MOQ and case pack requirements vary by product category. Contact us and we will confirm details based on your needs.
+
+4) Which regions do you distribute to?
+We are building our U.S. distribution footprint. Share your location and target region and we will confirm current coverage and options.
+
+5) Do you work with restaurants and foodservice buyers?
+Yes. We welcome foodservice enquiries and can discuss availability and distribution options.
+
+6) Can brands partner with Tony’s Delight USA for distribution?
+Yes. If you are a brand seeking U.S. distribution, email info@tonysdelight.com with product details and current markets.
+
+7) Do you provide pricing on the website?
+No. Pricing is provided directly to wholesale and distribution partners based on category, volumes, and logistics.
+
+8) How do I contact you?
+Use our Contact page or email info@tonysdelight.com. You can also call +1 (512) 737-2956.
+
+Add a CTA at the bottom:
+Button: Wholesale Enquiries -> /contact
+
+C) Create /quality page
+Meta title: Quality & Compliance | Tony’s Delight USA
+Meta description: Tony’s Delight USA focuses on quality standards, reliable sourcing, and responsible handling for wholesale distribution.
+
+Page content (use this exact copy, minor formatting allowed)
+
+Title: Quality & Compliance
+Intro:
+Tony’s Delight USA is committed to protecting quality and consistency across our wholesale and distribution partnerships. Our standards are designed to support trust, repeatability, and a reliable customer experience.
+
+Section: Sourcing Standards
+We work with established suppliers and brands and prioritize products that meet our expectations for consistency, packaging integrity, and dependable supply.
+
+Section: Packaging and Labeling
+We prioritize clear labeling, packaging durability, and practical wholesale handling. Specific label details and case pack information are confirmed during wholesale onboarding.
+
+Section: Cold Chain and Handling (where applicable)
+For frozen and seafood categories, we emphasize responsible cold chain handling and storage practices appropriate for the category and distribution channel.
+
+Section: Regulatory Awareness
+We take compliance seriously and work with partners to support responsible importing, storage, and distribution practices. For product-specific documentation and requirements, contact us at info@tonysdelight.com.
+
+Bottom CTA
+Text:
+For questions related to quality, documentation, or product handling, email info@tonysdelight.com.
+Button: Contact Us -> /contact
+
+D) Refine /jobs page (careers refinement)
+Do not remove existing Jobs page content. Add the following section if it does not already exist. If the page already has similar content, update it to match this wording.
+
+Add a section titled: Roles we’re interested in
+Copy:
+We are especially interested in candidates across:
+- Wholesale sales and partnerships
+- Operations and logistics
+- Warehousing and inventory coordination
+- Quality and sourcing support
+- Marketing and brand support
+
+Also ensure the “How to apply” section includes:
+Email info@tonysdelight.com with your resume or LinkedIn profile, your location, and a short note on how you can help Tony’s Delight USA grow.
+
+E) Add navigation and footer links
+1) Header navigation
+- Add “Partners” link to /partners
+- Add “FAQ” link to /faq
+- Add “Quality” link to /quality
+Do not remove any existing nav links. Keep styling identical.
+
+2) Footer quick links
+- Add Partners -> /partners
+- Add FAQ -> /faq
+- Add Quality -> /quality
+Do not remove any existing footer links or the Our Regions block or Instagram links.
+
+F) Verify
+1) Confirm these routes load without errors:
+- /partners
+- /faq
+- /quality
+- /jobs
+2) Confirm header and footer links are present.
+3) Confirm Instagram links remain intact (USA, UK, EU).
+4) Confirm no layout changes occurred.
+
+Deliverable
+After implementing, output:
+1) Files created/edited
+2) A short summary of changes
+3) Confirmation that all routes render

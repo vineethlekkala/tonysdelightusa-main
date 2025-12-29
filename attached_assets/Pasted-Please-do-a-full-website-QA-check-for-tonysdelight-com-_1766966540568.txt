@@ -1,0 +1,66 @@
+Please do a full website QA check for tonysdelight.com. Do NOT redesign, refactor, or remove anything. This is a test and bug-fix pass only.
+
+Rules
+1) Do not change layout, styling, or copy unless required to fix a bug.
+2) Do not remove any existing links, pages, footer items, or Instagram links.
+3) If something is broken, fix it with the smallest possible code change.
+4) After testing, provide a checklist report of what you tested and what you fixed, including file paths changed.
+
+QA Checklist to run
+
+A) Pages and routing
+1) Confirm these routes load with HTTP 200 and show correct content:
+   - /
+   - /about
+   - /products
+   - /products/dry
+   - /products/frozen
+   - /products/seafood
+   - /products/imported-brands
+   - /partners
+   - /quality
+   - /faq
+   - /jobs
+   - /contact
+2) Confirm that direct navigation to each URL works (copy paste URL into browser and hit enter), not just clicking links.
+3) Confirm the 404 page works for a fake route, and has a link back home.
+
+B) Navigation and links
+1) Header nav links all work and do not 404.
+2) Footer Quick Links all work.
+3) Footer Our Regions links work:
+   - USA https://tonysdelight.com
+   - UK https://tonysdelight.co.uk (opens new tab, rel noopener noreferrer)
+   - EU https://tonysdelighteu.com (opens new tab, rel noopener noreferrer)
+4) Footer Instagram links work and open new tab:
+   - https://www.instagram.com/tonysdelightusa/
+   - https://www.instagram.com/tonysdelightuk/
+   - https://www.instagram.com/tonysdelighteu/
+5) Contact CTAs:
+   - mailto:info@tonysdelight.com works
+   - tel:+15127372956 works
+
+C) SEO and indexing basics
+1) Confirm sitemap works:
+   - /sitemap.xml returns raw XML (Content-Type application/xml)
+2) Confirm robots.txt exists:
+   - /robots.txt allows indexing and references sitemap
+3) Confirm each page has a unique <title> and meta description.
+4) Confirm favicon loads and is not the generic browser icon.
+
+D) Mobile and browser compatibility
+1) Check layout for mobile widths (iPhone size) and desktop.
+2) Confirm site works in Safari and Chrome.
+3) Confirm there are no console errors on load (or fix obvious ones).
+
+E) Performance and assets
+1) Confirm images load and are not broken.
+2) Confirm there are no missing fonts or CSS files.
+3) Confirm there are no mixed-content warnings.
+
+Deliverable
+1) Provide a QA report with:
+   - Passed items
+   - Failed items
+   - Fixes applied (with file paths)
+2) If any item cannot be fixed without major refactor, do not refactor. Just report it and suggest the minimal change approach.

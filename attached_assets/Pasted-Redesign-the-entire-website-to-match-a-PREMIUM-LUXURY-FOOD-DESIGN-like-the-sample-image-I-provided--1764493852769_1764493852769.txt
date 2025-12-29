@@ -1,0 +1,127 @@
+Redesign the entire website to match a PREMIUM LUXURY FOOD DESIGN like the sample image I provided.
+
+=====================================================
+### GLOBAL DESIGN STYLE
+=====================================================
+Use a **luxury modern food brand theme** with:
+
+COLORS:
+- Clean white (#FFFFFF)
+- Soft off-white (#F8F8F8)
+- Soft charcoal black (#111213 or #1A1A1C)
+- Gold accents (#C9A86A or #D5B982)
+- Light grey (#EDEDED) dividers
+
+Remove ALL orange colors. Replace with **gold luxury highlights**.
+
+=====================================================
+### LAYOUT STYLE (VERY IMPORTANT)
+=====================================================
+Adopt the same visual patterns as the reference image:
+
+1. Split-screen hero layout:
+   - White on the left  
+   - Soft charcoal black rounded shape on the right  
+   - Smooth curved shapes (organic curves, not sharp blocks)
+
+2. Curvy blob shapes:
+   - Add modern curve separators between sections
+   - Example: white → curved black → white
+
+3. Floating elements:
+   - Add floating leaves, spices, food elements near hero and category banners
+   - Use subtle shadows under floating objects
+
+4. Luxury buttons:
+   - Gold gradient (#D5B982 → #C9A86A)
+   - Soft shadow
+   - Rounded with 14–20px radius
+
+5. Cards:
+   - White cards with gold borders or soft shadow
+   - Rounded corners (20px)
+   - Minimal icons
+
+6. Text:
+   - Headings: rich black (#111)
+   - Body text: light charcoal (#444)
+   - Gold for small highlights ONLY
+
+=====================================================
+### HERO SECTION (Home Page)
+=====================================================
+Rebuild hero section like the reference:
+
+LEFT:
+- Large luxury heading: “Freshness in Every Bite” (dark charcoal)
+- Subtitle in soft grey
+- Gold accent line or label (CHEF'S SPECIAL)
+- Gold button: “Get Wholesale Price”
+
+RIGHT:
+- Curved black background shape
+- Insert high-quality product or food bowl image
+- Add floating leaves/spices around it
+
+Padding: large (80–120px)
+
+=====================================================
+### CATEGORIES (Dry / Frozen / Seafood / Brands)
+=====================================================
+Update all category pages to match premium theme:
+
+- Background transitions: white → curved black → white  
+- Category cards = white cards with gold border  
+- Product images = floating with subtle shadow  
+- Side filters = white with gold highlight on active category  
+- Remove all dark blocks and all orange accents
+
+=====================================================
+### IMPORTED BRANDS PAGE
+=====================================================
+Make brand grid premium:
+
+- White background
+- Brand cards: white with gold border (1–2px)
+- Hover: soft gold glow
+- Search bar: white with gold outline
+
+=====================================================
+### ABOUT / CONTACT / JOBS PAGES
+=====================================================
+Apply premium theme:
+
+- White backgrounds
+- Curved black accent blocks
+- Gold icons + section headings
+- Soft shadows for cards
+- Elegant typography
+
+=====================================================
+### CONTACT FORM
+=====================================================
+Keep the new design BUT:
+- White background
+- Gold outline inputs
+- Black text
+- Gold submit button
+
+Email functionality:
+- On submit, send email to: info@tonysdelight.co.uk
+- Keep existing Nodemailer backend
+- Do NOT change navbar
+
+=====================================================
+### DO NOT CHANGE
+=====================================================
+- Navbar (keep pure white)
+- Backend logic
+- Product dynamic loading
+- Google Sheet integration
+
+=====================================================
+### FILES TO UPDATE
+=====================================================
+- All page HTML files
+- styles.css (major redesign with luxury theme)
+- Minimal edits to JS for animations or floating effects

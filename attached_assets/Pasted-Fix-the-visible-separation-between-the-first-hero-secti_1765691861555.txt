@@ -1,0 +1,84 @@
+Fix the visible separation between the first (hero) section and the second section
+by adding a smooth blur + shadow blend effect.
+Also add a dark shadow fade at the bottom of the second section.
+
+DO NOT change:
+- Text content
+- Fonts
+- Color palette
+- Navbar
+- Logo
+- Buttons
+- Routes
+- Backend logic
+- Existing animations
+
+========================================
+1. BLUR + BLEND BETWEEN SECTIONS
+========================================
+
+- Add a smooth visual transition between:
+  - the hero section
+  - and the second section
+
+Implementation:
+- Add a pseudo-element overlay at the bottom of the hero section
+  OR at the top of the second section.
+
+The overlay must:
+- Use a vertical gradient fade
+- Apply a subtle blur effect
+- Fade from transparent → dark (or vice versa)
+
+Example behavior (conceptual):
+- Height: ~80–120px
+- Backdrop blur: blur(6px–10px)
+- Gradient opacity: 0 → 0.6
+
+This must visually blend both background images so there is NO visible hard edge.
+
+========================================
+2. REMOVE HARD EDGES COMPLETELY
+========================================
+
+- Ensure no visible:
+  - straight horizontal cut
+  - hard background stop
+  - color band between sections
+
+- Sections should feel like one continuous canvas.
+
+========================================
+3. SECOND SECTION BACKGROUND SHADOW
+========================================
+
+- Add a dark overlay/shadow on the background image of the SECOND section.
+- The shadow should:
+  - Be subtle and premium
+  - Improve text readability
+  - NOT fully darken the image
+
+Target effect:
+- Overlay opacity: ~0.35–0.45
+- Use gradient if possible (lighter top → darker bottom)
+
+========================================
+4. BOTTOM PAGE SHADOW
+========================================
+
+- At the very bottom of the second section:
+  - Add a dark fade-out shadow
+  - Helps visually “close” the page
+
+Implementation:
+- Use a bottom gradient overlay
+- Fade from transparent → dark
+
+========================================
+EXPECTED RESULT
+========================================
+
+- Hero and second section visually blend together.
+- No visible image break or seam.
+- Second section background looks deeper and more premium.
+- Page ends with a clean dark fade instead of a hard stop.

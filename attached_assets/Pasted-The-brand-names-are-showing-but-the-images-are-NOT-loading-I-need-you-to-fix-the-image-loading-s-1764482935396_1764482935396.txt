@@ -1,0 +1,98 @@
+The brand names are showing, but the images are NOT loading.  
+I need you to fix the image loading system completely.
+
+##############################################
+### FIX ALL IMAGE PATHS
+##############################################
+All images are located inside:
+
+/public/assets/brands/homepage/
+/public/assets/brands/all/
+
+Fix ALL <img> tags so they use the CORRECT Replit static path:
+
+src="/assets/brands/homepage/[filename]"
+or
+src="/assets/brands/all/[filename]"
+
+NOT:
+- "public/assets/...“
+- "./assets/..."
+- “/public/...”
+- “/brands/...”
+
+Only use:
+"/assets/brands/.../filename"
+
+##############################################
+### FIX EXPRESS STATIC SERVING
+##############################################
+In server.js, ensure this line exists (and only once):
+
+app.use(express.static("public"));
+
+If missing → add it near the top, above any routes.
+
+##############################################
+### FIX FILENAME ISSUES
+##############################################
+For every uploaded image:
+- Convert filenames to lowercase
+- Remove spaces
+- Replace spaces with hyphens
+- Remove special characters
+- Use .png or .webp
+
+Example:
+"Double Horse Logo.PNG" → "double-horse.png"
+
+Update the HTML rendering logic to match the corrected filenames.
+
+##############################################
+### FIX HOMEPAGE LOGO SECTION
+##############################################
+Update the homepage code so the logos load from:
+
+/assets/brands/homepage/
+
+Ensure loop generates <img> tags like:
+
+<img src="/assets/brands/homepage/{{filename}}" alt="{{brandName}}" loading="lazy">
+
+##############################################
+### FIX IMPORTED BRANDS PAGE
+##############################################
+Update imported-brands.html to load ALL logos from:
+
+/assets/brands/all/
+
+Fix the loop that creates the logo grid so image paths resolve correctly.
+
+##############################################
+### TEST IMAGE LOADING
+##############################################
+After fixing paths, insert a simple test:
+
+<img src="/assets/brands/all/maggi.png">
+
+Confirm that it loads.  
+If not, adjust the path until the test works.
+
+##############################################
+### DO NOT CHANGE ANYTHING ELSE
+##############################################
+- Do NOT modify backend API for products
+- Do NOT change navbar, footer, or other pages
+- Only fix the brand logo loading system
+
+##############################################
+### OUTPUT
+##############################################
+Provide the corrected:
+- index.html (homepage brand section)
+- imported-brands.html (full brand grid)
+- styles.css (updated paths if needed)
+- script.js (only if path is generated via JS)
+- server.js (static line fix)
+
+The goal is to make ALL logos load correctly from the folders.

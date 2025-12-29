@@ -1,0 +1,65 @@
+Build a fully responsive, modern website for “Tony’s Delight UK Ltd.”  
+Make the design and layout inspired by the style of a professional wholesale-food site (similar in feel to Daily Delight), but using original content, images, and branding.
+
+TECH STACK:
+- HTML, CSS, JavaScript (frontend)
+- Node.js + Express backend
+- Google Sheet for product data
+- Cloudinary (or CDN) for product images
+
+REQUIREMENTS:
+
+1. HOMEPAGE
+   - Hero section: full-width background (food/warehouse/fresh produce), smooth scroll or fade-in transitions, overlay for readability.
+   - Hero text:
+       20+ Years of Excellence  
+       Premium Global Food Wholesale  
+       Your trusted partner for premium seafood, dry products, and frozen foods. Competitive prices, reliable service, unmatched quality.
+     Buttons: Get Wholesale Prices, Contact Us
+   - After hero: Category preview sections (Dry Products, Frozen Products, Seafood, Imported Brands, Lal Qilla Basmati)
+     * Each category has an attractive card/banner (with background or icon)  
+     * On click, leads to the category page (dynamic products list)
+
+2. CATEGORY PAGES
+   - For each category (Dry, Frozen, Seafood, Imported Brands, Basmati Rice)  
+   - Fetch product data from backend via API (/api/products or /api/products?category=…)  
+   - Show product grid: image, title, price/description — responsive layout (1–2–3 columns)  
+   - Lazy-load images from Cloudinary/CDN  
+
+3. RESPONSIVENESS & PERFORMANCE
+   - Fully responsive on mobile / tablet / desktop  
+   - Lazy loading of images  
+   - Use modern fonts, spacing, minimalistic / clean design  
+   - Smooth animations (fade-in on scroll, hover effects, transitions)  
+
+4. NAVBAR + FOOTER + PAGES
+   - Navbar: logo + menu (Home, About Us, Dry Products, Frozen Products, Seafood, Imported Brands, Lal Qilla Basmati, Jobs, Contact)  
+   - Footer: contact info, quick links, copyright  
+   - Static pages: About Us, Jobs, Contact — styled consistently  
+
+5. BACKEND + DATA
+   - Backend Node.js + Express serving products from Google Sheet  
+   - API endpoint(s) for products / per-category  
+   - Cloudinary image URLs for product images  
+
+6. STYLE / UI / UX
+   - Clean, modern, professional look  
+   - Consistent color scheme and typography  
+   - Use whitespace, grid layout, card design like a modern retail/wholesale site  
+   - Use subtle scroll/parallax/transition effects (but not heavy or slow)
+
+OUTPUT:
+- index.html (homepage)  
+- category pages (dry-products.html, frozen-products.html, seafood.html, imported-brands.html, basmati.html)  
+- about.html, contact.html, jobs.html, etc.  
+- styles.css  
+- script.js  
+- server.js (backend)  
+- scripts/assets as needed  
+
+Ensure the final site:  
+- Loads quickly  
+- Looks professional  
+- Is easy to update (via Google Sheet)  
+- Is mobile-friendly  
+

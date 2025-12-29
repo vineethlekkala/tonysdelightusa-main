@@ -1,0 +1,113 @@
+Fix the entire website design so that it becomes a clean, bright, premium layout.  
+Remove ALL dark themes, black backgrounds, navy gradients, and dark UI blocks from every page.
+
+====================================================
+### GLOBAL APPEARANCE (NO DARK THEME)
+====================================================
+Replace all dark backgrounds with:
+- Pure white (#ffffff) for major sections  
+- Light grey (#f7f7f9 or #f5f5f7) for alternate strips  
+- Soft shadows for depth  
+- Remove ALL black, navy, or dark gradients  
+- Remove dark cards and dark containers  
+- Replace them with white cards + subtle shadow  
+
+Typography:
+- Headings: #222  
+- Body text: #555  
+- Never use yellow text or gold text  
+
+Buttons:
+- Primary: orange (#F97316) with white text  
+- Secondary: white with light grey border  
+
+====================================================
+### PURE WHITE NAVBAR + SCROLL HIDE
+====================================================
+Make NAVBAR:
+
+1. **Pure white background**
+   background: #ffffff;
+
+2. **Fixed but auto-hide on scroll down**
+   - On scroll down → navbar slides up (hide)
+   - On scroll up → navbar appears (show)
+   Use JS: add/remove a class such as `.hide-nav` using scroll direction.
+
+3. **Navbar text & links**
+   - Color: #222  
+   - Hover: #F97316  
+   - Active: #F97316  
+
+4. **Subtle shadow**
+   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+
+5. Padding:
+   padding: 14px 40px;
+   height around 75–80px
+
+6. Add to CSS:
+   body { padding-top: 90px; }
+
+====================================================
+### HOME PAGE FIX (NO DARK BACKGROUND)
+====================================================
+Remove the dark navy background behind “Your Trusted Distributor”.  
+Replace with:
+
+- White background OR very light grey (#fafafa)
+- Soft radial grey decorative shapes only if needed
+- Card backgrounds = white with soft shadow
+- Remove black/dark gradient around the image
+
+The entire home page must appear bright, modern, and clean.
+
+====================================================
+### CATEGORY PAGES FIX (Dry / Frozen / Seafood / Basmati)
+====================================================
+Fix all category pages:
+
+- Background WHITE (#ffffff)
+- Sidebar = light grey (#f3f4f6), dark text (#222)
+- Product card = white card with soft shadow, no dark background
+- Remove dark containers and dark page sections
+- Ensure text is fully readable
+
+====================================================
+### IMPORTED BRANDS PAGE
+====================================================
+Make brand page clean:
+
+- White background  
+- Brand cards = white with border or light shadow  
+- Remove ALL dark backgrounds or glass effects  
+- Search bar = white with light grey border  
+
+====================================================
+### ABOUT / CONTACT / JOBS PAGES
+====================================================
+Apply clean theme:
+
+- No dark sections  
+- Use white/light grey alternating backgrounds  
+- White cards with soft shadow  
+- Clean spacing  
+
+====================================================
+### IMPORTANT
+====================================================
+Keep backend and data unchanged:
+- DO NOT modify API, routes, or product loading.
+- Only change HTML/CSS/JS related to UI and navbar behavior.
+
+====================================================
+### FILES TO UPDATE
+====================================================
+- styles.css  
+- index.html  
+- about.html  
+- all product category pages  
+- imported-brands.html  
+- contact.html  
+- jobs.html  
+- small JS snippet for scroll-hide navbar  

@@ -1,0 +1,110 @@
+I want to upgrade the ENTIRE homepage design into a premium, luxurious, modern layout.
+
+IMPORTANT:
+- Do NOT remove backend API integrations.
+- Do NOT modify category navigation.
+- Only change the visual layout, effects, images, and presentation.
+
+Apply ALL of the following changes:
+
+######################################################
+### 1. REMOVE THE IMPORTED BRANDS HEADER BANNER
+######################################################
+On imported-brands.html, REMOVE this entire section:
+- “Global Selection”
+- “Imported Brands”
+- Subtitle
+- Background gradient
+
+Only keep the brand logo grid.
+
+######################################################
+### 2. MAKE THE HOME HERO SECTION PREMIUM & LUXURY
+######################################################
+Completely redesign the hero section.
+
+REPLACE the current boring food background with:
+- A premium, luxury-grade food photo (high end seafood platter, basmati rice photo, or gourmet dish)
+- Add a dark gradient overlay
+- Add soft blur-glow edges
+
+Hero Typography:
+- Large, bold premium-style text (white)
+- Spacing and letter-spacing improved
+- Add subtle fade-in upward animation
+
+Buttons:
+- "Get Wholesale Prices" → luxury gold gradient button
+- "Contact Us" → elegant outline dark button
+
+MAKE THIS LOOK EXPENSIVE & HIGH-END.
+
+######################################################
+### 3. UPGRADE “Premium Rice / Lal Qilla Basmati” SECTION
+######################################################
+Current section is boring; transform it.
+
+Apply:
+- A premium basmati rice background image with soft gold overlay
+- Card design for the text:
+      - Glassmorphism style (blur, transparent white)
+      - Soft golden glow border
+- Remove text “No products available in this category”
+- Add placeholder area for products (but no empty message)
+
+Make the section visually represent premium authentic basmati rice.
+
+######################################################
+### 4. UPGRADE “Dry Products” SECTION (MAKE IT LUXURY)
+######################################################
+Transform this into a high-quality market-style layout.
+
+Change background:
+- Replace plain background with subtle textured pattern OR soft beige premium grain background
+
+Add luxury design elements:
+- Gold accents
+- Soft glow borders
+- Modern card layouts for product categories
+- Replace text with modern typography
+- Add a premium food illustration or abstract shapes (no cartoon style)
+
+Section layout:
+- Left side: big title “Premium Dry Products”
+- Right side: glass-card style description card
+- Below: dynamic product grid (KEEP backend fetch logic)
+- REMOVE the “No products available” message entirely
+
+######################################################
+### 5. REMOVE ALL “No Products Available” MESSAGES
+######################################################
+Wherever categories have no products yet:
+- Hide the message completely
+- Simply show nothing
+
+######################################################
+### 6. GENERAL PAGE UPGRADE
+######################################################
+Modernize entire homepage styling:
+
+- Smooth scroll animations (fade-up, fade-left)
+- Add subtle parallax backgrounds
+- Use gold + deep navy + white color palette for luxury
+- Increase spacing between sections
+- Add rounded section dividers with light gradients
+- Improve typography (use more premium fonts)
+
+######################################################
+### 7. DO NOT MODIFY BACKEND OR DATA LOGIC
+######################################################
+- Keep Google Sheets API fetching intact
+- Keep dynamic product loading intact
+- Do NOT change the brand grid page layout except removing the header banner
+
+######################################################
+### FILES TO UPDATE
+######################################################
+- index.html
+- imported-brands.html
+- styles.css
+- script.js (only for animations if needed)

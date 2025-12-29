@@ -1,0 +1,89 @@
+Update the homepage (index.html, styles.css, script.js) to make it more modern, animated, and visually engaging—similar to tonysdelighteu.com, while keeping my existing backend, Google Sheet integration, navbar, and footer unchanged.
+
+IMPORTANT: Do NOT remove backend code, product loader code, or category pages. ONLY redesign the homepage visuals.
+
+#######################################
+### HOMEPAGE REDESIGN REQUIREMENTS
+#######################################
+
+1. HERO SECTION — Make it Premium + Modern
+- Keep my headline exactly:
+  “20+ Years of Excellence”
+  “Premium Global Food Wholesale”
+  “Your trusted partner for premium seafood, dry products, and frozen foods. Competitive prices, reliable service, and unmatched quality.”
+- Use a clean FULL-WIDTH background image with a dark overlay.
+- Add subtle parallax scroll effect.
+- Add smooth fade-in text animations.
+- Buttons should be rounded, premium-looking, with hover glow.
+
+2. ADD ANGLED / DIAGONAL SECTION LIKE tonysdelighteu.com
+Below the hero section:
+- Add a diagonal white section divider.
+- Inside this new section, add:
+  • A big bold subheading:
+    “Supplying the UK with Premium Asian & Seafood Products”
+  • A short supporting paragraph.
+  • A “Get Wholesale Prices” button.
+- Include modern, abstract shapes (yellow/blue) similar to tonysdelighteu.com.
+- Make shapes responsive and animated (slow float animation).
+
+3. ADD A SECOND MODERN SECTION (Image + Text)
+- Left side: product or warehouse image with soft shadow and rounded corners.
+- Right side:
+  • Heading: “Your Trusted Distributor”
+  • Bullet points with icons:
+      - Direct import pricing
+      - Weekly UK-wide deliveries
+      - Strict EU & Swiss compliance
+      - Family-run reliability
+- Add subtle animations (slide-in left/right).
+
+4. MODERN SPACING + TYPOGRAPHY
+- Use clean typography, smooth spacing, shadow depth, and sleek paddings.
+- Make all elements properly scale on mobile.
+- Ensure text wraps gracefully on tablets + phones.
+
+5. RESPONSIVE BEHAVIOR
+- Must be fully responsive on all screens.
+- On mobile:
+  • Shapes must shrink or reposition to prevent overlap.
+  • Text must be readable with proper spacing.
+  • Buttons should be centered and full width.
+
+6. KEEP EVERYTHING ELSE IN THE SITE THE SAME
+- Do NOT change:
+  • Navbar
+  • Footer
+  • Backend endpoints
+  • Product category pages
+  • Google Sheet integration
+- Only redesign homepage visuals.
+
+7. SMOOTH ANIMATIONS
+Use CSS or AOS or GSAP for:
+- fade-in
+- slide-in
+- parallax
+- floating shapes
+- diagonal transitions
+
+#######################################
+### FILES TO UPDATE
+#######################################
+- index.html (homepage only)
+- styles.css (add new styles, keep existing)
+- script.js (add animation triggers)
+- Add /assets/shapes/ folder for decorative blobs if needed
+
+#######################################
+### FINISHING QUALITY
+#######################################
+The page must look:
+- Premium
+- Clean
+- Modern
+- With diagonal separators
+- With floating abstract shapes (yellow, blue)
+- With depth, shadow, smooth motion
+- Similar style to tonysdelighteu.com
+- Fully brand-consistent with Tony’s Delight UK

@@ -1,0 +1,204 @@
+Build a fully responsive, modern company website for “Tony’s Delight UK Ltd.”  
+Use HTML, CSS, JavaScript, and a lightweight backend (Node.js + Express).  
+The website must include scroll-based image transitions similar to https://dailydelight.com/.
+
+############################################
+### CORE CHANGES REQUESTED
+############################################
+
+1. HOME PAGE MUST MATCH DAILY DELIGHT STYLE  
+- Implement smooth scroll-based image transitions (fade-in, parallax, or slide) similar to DailyDelight.com  
+- Replace ENTIRE existing homepage content with this new hero/content block:
+
+---------------------------------------------
+Hero Section Text:
+20+ Years of Excellence  
+Premium Global  
+Food Wholesale  
+
+Your trusted partner for premium seafood, dry products, and frozen foods.  
+Competitive prices, reliable service, and unmatched quality.
+
+Buttons:
+[ Get Wholesale Prices ]  
+[ Contact Us ]
+---------------------------------------------
+
+- Ensure hero section contains a full-width background slider or scroll-transition images like DailyDelight.com  
+- Use smooth opacity and scale transitions while scrolling  
+- Use light, premium aesthetic (white, gold, dark tones)
+
+2. NAVBAR  
+- Logo upload on LEFTMOST side of navbar (placeholder image, I will replace)  
+- Menu items on RIGHT:
+  Home  
+  About Us  
+  Dry Products  
+  Frozen Products  
+  Seafood  
+  Imported Brands  
+  Lal Qilla Basmati  
+  Jobs  
+  Contact  
+
+3. REMOVE "Download Catalogue" FROM NAVBAR  
+- Instead place a clean “Download Catalogue (PDF)” button on HOME PAGE **below hero section or after transition images**  
+- Add small “Download Catalogue” link in footer
+
+############################################
+### PRODUCT SYSTEM (BACKEND + GOOGLE SHEET)
+############################################
+
+Create backend (Node.js + Express) to fetch products from Google Sheets.
+
+Google Sheet Columns:
+- ImageURL  
+- Title  
+- Description  
+- Category  
+
+Backend Endpoints:
+- GET /api/products  
+  → Fetch sheet data, convert to JSON  
+- GET /api/products/:category  
+  → Return only products from that category  
+- Cache results for speed  
+
+FRONTEND:
+- All category pages MUST show ONLY items pulled from Google Sheet  
+- If no items exist for a category, show “No products available.”
+
+############################################
+### ABOUT US PAGE CONTENT
+############################################
+
+Tony’s Delight UK  
+UK distributor of premium Indian foods & sustainably sourced seafood
+
+Intro:  
+We serve wholesalers, retailers, and foodservice providers with the best quality at the best prices — backed by direct sourcing and a strong European network.
+
+SECTION: Who We Are  
+(Insert all text exactly as provided previously)
+
+SECTION: Our Story  
+(Insert all text previously provided)
+
+Stats:
+- 20+ years in global food trade  
+- Strong presence across EU & CH  
+- Thousands of satisfied clients  
+
+Mission & Vision  
+Include complete text provided earlier.
+
+What We’re Known For  
+Include full bullet list.
+
+India & Seafood Focus  
+Include seafood categories and key Indian SKUs.
+
+Sourcing Regions + Certifications
+
+Global Presence (UK, India, Europe)
+
+############################################
+### JOBS PAGE CONTENT
+############################################
+
+Title: Build Your Career with Tony’s Delight UK  
+Subtitle: Explore our current opportunities
+
+Job Cards:
+- Internship — Opportunity  
+- Sales Executive — Full-time  
+- Delivery Driver — Full-time  
+- Social Media Content Creator & Marketing — Full-time  
+Each card must include short description + “View Details” button.
+
+############################################
+### CONTACT PAGE CONTENT
+############################################
+
+Title: Contact Us  
+Subtitle: Trade enquiries welcome — wholesale pricing, fast quotes, same-day replies.
+
+Form fields:
+Your Name *  
+Company  
+Email *  
+Phone  
+Message *  
+Submit button  
+Add secondary button: “WhatsApp instead”
+
+Branches:
+(Include full list of UK, Netherlands, Switzerland, Germany, India — exactly as previously provided)
+
+############################################
+### FOOTER CONTENT
+############################################
+
+Left Column:
+About Tony’s Delight (full paragraph provided earlier)
+
+Middle Column:
+Quick Links:
+Home  
+About Us  
+Dry Products  
+Frozen Products  
+Seafood  
+Imported Brands  
+Lal Qilla Basmati  
+Jobs  
+Contact  
+
+Right Column:
+Contact Info  
+Email: info@tonysdelight.co.uk  
+Phone: +44 7442 712265  
+Address: Unit 4 Britannia Business Park, Stourport Road, Kidderminster DY11 7PZ, UK  
+
+Footer Icons:
+WhatsApp, Instagram, Facebook  
+Add: “Open in Google Maps”
+
+Bottom Line:
+© 2025 Tony’s Delight UK Ltd. All rights reserved.
+
+############################################
+### TECHNICAL REQUIREMENTS
+############################################
+
+- Use scroll-trigger animations (GSAP, AOS, or pure CSS/JS) to replicate DailyDelight-style transitions  
+- Hero section transitions MUST mimic DailyDelight’s smooth scroll feel  
+- Category pages dynamically fetch from backend  
+- Fully mobile responsive  
+- Lazy-load images  
+- Code comments indicating where to replace:
+  • Google Sheet ID  
+  • Logo  
+  • Catalogue PDF  
+
+############################################
+### FILE STRUCTURE TO GENERATE
+############################################
+
+/public  
+  /assets  
+  styles.css  
+  script.js  
+index.html  
+about.html  
+jobs.html  
+contact.html  
+dry-products.html  
+frozen-products.html  
+seafood.html  
+imported-brands.html  
+lal-qilla-basmati.html  
+server.js  
+sheets.js  
+
+Generate full working code for all pages and backend.

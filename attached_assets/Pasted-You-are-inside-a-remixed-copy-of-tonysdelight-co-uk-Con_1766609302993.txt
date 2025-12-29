@@ -1,0 +1,183 @@
+You are inside a remixed copy of tonysdelight.co.uk. Convert it into the US website for Tony’s Delight USA under tonysdelight.com.
+
+NON-NEGOTIABLES
+1) Remove WhatsApp entirely. No WhatsApp buttons, icons, links, “Enquire on WhatsApp”, or chat language anywhere.
+2) Use these contact methods only:
+   - Email: info@tonysdelight.com
+   - Phone: +1 (512) 737-2956 (click-to-call tel:+15127372956)
+   - Contact form (Name, Company, Email, Phone, Message)
+3) The site is a wholesale/distribution catalog, NOT ecommerce: no checkout, no add-to-cart, no pricing.
+4) All CTAs must point to /contact or tel:+15127372956 or mailto:info@tonysdelight.com.
+
+SITE BRAND
+- Brand name: Tony’s Delight USA
+- Tone: premium, trustworthy, family-run, wholesale-focused
+- Clean layout, simple typography, mobile-first
+- Keep the same overall structure/components from the UK site, just swap content and remove WhatsApp.
+
+NAVIGATION (exact)
+Top nav:
+- Home (/)
+- About Us (/about)
+- Products (dropdown or section index /products)
+  - Dry Products (/products/dry)
+  - Frozen Products (/products/frozen)
+  - Seafood (/products/seafood)
+  - Imported Brands (/products/imported-brands)
+  - Lal Qilla Basmati (/products/lal-qilla-basmati)
+- Contact (/contact)
+
+Footer must include:
+- About Tony’s Delight USA (short paragraph)
+- Quick links (Home, About, Products, Contact)
+- Contact (email, phone, “United States (Texas)”)
+- Copyright: © {current year} Tony’s Delight USA
+
+PAGES (create/update with EXACT COPY BELOW)
+Create or update these routes/pages with the copy provided. If the project is React/Next, implement as pages/routes. If it’s plain HTML, create separate pages with matching paths. If it’s a single-page app, implement routing.
+
+GLOBAL CTA WORDING (use only these)
+- “Wholesale Enquiries”
+- “Contact Us”
+- “Get in Touch for Distribution”
+- “Call +1 (512) 737-2956”
+- “Email info@tonysdelight.com”
+
+HOMEPAGE (/)
+Meta title: Tony’s Delight USA | Imported Foods Wholesale & Distribution
+Meta description: Tony’s Delight USA imports and distributes premium international food products across the United States. Wholesale and distribution enquiries welcome.
+
+Hero:
+Headline: Bringing Global Flavors to the United States
+Subheadline: Tony’s Delight USA is a family-run importer and distributor of premium international food products. We partner with wholesalers, retailers, and distributors who want quality and consistency.
+Primary button: Wholesale Enquiries -> /contact
+Secondary button: Call +1 (512) 737-2956 -> tel:+15127372956
+
+Section: Who We Are
+Tony’s Delight USA is built on long-term relationships, trusted sourcing, and a simple promise: only products we would proudly serve our own families. We are expanding into the U.S. to make global pantry staples and specialty imports easier to access through wholesale and distribution partners.
+
+Section: What We Offer (category cards linking to each page)
+- Dry Products -> /products/dry
+- Frozen Products -> /products/frozen
+- Seafood -> /products/seafood
+- Imported Brands -> /products/imported-brands
+- Lal Qilla Basmati -> /products/lal-qilla-basmati
+
+Section: Why Tony’s Delight USA (4 value blocks)
+- Trusted International Sourcing: Carefully selected products from established suppliers and brands.
+- Wholesale Ready: Built for distributors, retailers, and foodservice buyers who need consistency.
+- Quality First: Clean labeling, reliable packaging, and a focus on customer experience.
+- Relationship Driven: We prioritize partnerships, responsiveness, and long-term growth.
+
+Section: Call to Action
+Headline: Stock Tony’s Delight USA
+Text: For wholesale, distribution, and partnership enquiries, contact our team.
+Button: Contact Us -> /contact
+
+ABOUT (/about)
+Meta title: About | Tony’s Delight USA
+Meta description: Learn the story behind Tony’s Delight USA, a family-run importer and distributor bringing premium international food products to the United States.
+
+Page title: About Tony’s Delight USA
+
+Section: Our Story
+Tony’s Delight began as a family-led effort to bring trusted, high-quality international foods to communities that value authentic flavors. The business has grown through relationships, consistency, and a clear focus on quality over shortcuts.
+
+Section: Expansion to the United States
+Tony’s Delight USA was created to serve U.S. wholesalers, retailers, and distributors looking for dependable imported products and a partner who thinks long-term. Our goal is simple: build a U.S. distribution footprint that supports scale while protecting the customer experience.
+
+Section: Founders
+Tony Philip Perumpankuzhy leads Tony’s Delight with a hands-on approach to sourcing, product selection, and partnerships. His leadership is grounded in family values and a deep commitment to trust.
+
+Vineeth Reddy Lekkala is the U.S. partner for Tony’s Delight USA. Vineeth is originally from Hyderabad, India, attended medical school in the United Kingdom, and is currently an outpatient Internal Medicine physician in Marble Falls, Texas. His medical mindset brings an obsessive focus on quality control, consistency, and customer experience, with the same standards he expects in clinical practice.
+
+Section: Family
+Sheba is an important part of the Tony’s Delight journey, bringing strength, support, and family-centered perspective that shapes how the brand shows up and serves others.
+
+Tashi Lekkala is originally from the Philippines. She completed nursing school in the Philippines and later attended medical school in the Philippines. Vineeth and Tashi met in McKinney, Texas during their U.S. clinical experience observerships at a heart clinic. Her Filipino identity and international exposure add a meaningful cultural dimension to the family and the future vision of what Tony’s Delight can represent globally.
+
+Vihaan is Vineeth and Tashi’s son. He represents the next generation and the long-term mindset behind Tony’s Delight USA: building something enduring, trusted, and family-first.
+
+PRODUCTS INDEX (/products)
+Meta title: Products | Tony’s Delight USA
+Meta description: Browse Tony’s Delight USA product categories for wholesale and distribution.
+
+Page title: Products
+Intro: Browse our categories below. For wholesale availability and distribution enquiries, contact us.
+Category links/cards same as homepage.
+
+CATEGORY PAGES (each must exist)
+All category pages must:
+- Have a short intro paragraph (below)
+- Display product cards in a grid
+- Each product card has: image (placeholder allowed), name, pack size (if known; otherwise “Contact for pack sizes”), and a single CTA button “Wholesale Enquiries” -> /contact
+- No pricing, no cart, no checkout.
+
+Create these pages with these intros:
+
+/products/dry
+Title: Dry Products
+Intro: Pantry staples and dry goods selected for quality and reliability. Contact us for wholesale availability and pack sizes.
+
+/products/frozen
+Title: Frozen Products
+Intro: Frozen items curated for consistent quality and cold-chain handling. Contact us for wholesale enquiries.
+
+/products/seafood
+Title: Seafood
+Intro: Carefully sourced seafood offerings for wholesale partners. Contact us for current availability and distribution details.
+
+/products/imported-brands
+Title: Imported Brands
+Intro: A growing selection of trusted international brands. Contact us to discuss distribution and wholesale opportunities.
+
+/products/lal-qilla-basmati
+Title: Lal Qilla Basmati
+Intro: Premium basmati rice offerings for wholesale and distribution partners. Contact us for pack sizes and availability.
+
+PRODUCT DATA (implement as a simple in-code list; placeholders are fine)
+Create a minimal dataset so pages aren’t empty. Use 3 placeholder items per category with safe generic names. Example:
+- Dry: “Premium Chai Cups (Set)”, “Traditional Spice Blend”, “Snack Mix Assortment”
+- Frozen: “Frozen Paratha”, “Frozen Samosa”, “Frozen Dessert Selection”
+- Seafood: “Frozen Shrimp”, “Frozen Fish Fillets”, “Seafood Mix”
+- Imported Brands: “Imported Brand Selection A”, “Imported Brand Selection B”, “Imported Brand Selection C”
+- Lal Qilla: “Lal Qilla Basmati 5 lb”, “Lal Qilla Basmati 10 lb”, “Lal Qilla Basmati 20 lb”
+Each item: slug/id, name, category, image placeholder, short description (1 sentence), pack size (string).
+
+If the existing UK project already has product components, reuse them but remove price/cart/whatsapp and swap CTA to /contact.
+
+CONTACT (/contact)
+Meta title: Contact | Tony’s Delight USA
+Meta description: Contact Tony’s Delight USA for wholesale, distribution, and partnership enquiries.
+
+Title: Contact
+Intro: For wholesale, distribution, and partnership enquiries, please contact us using the details below.
+
+Show clearly:
+Email: info@tonysdelight.com (mailto link)
+Phone: +1 (512) 737-2956 (tel link)
+Location: United States (Texas)
+
+Contact form fields (required):
+- Name
+- Company
+- Email
+- Phone
+- Message
+Submit behavior:
+- If the project already supports form submission, keep it.
+- If not, implement a simple front-end “mailto” fallback: on submit, open the user’s email client to info@tonysdelight.com with subject “Wholesale Enquiry - Tony’s Delight USA” and include form fields in the body.
+Also show a note under the form:
+“We respond as soon as possible. Please include your company name and the products you’re interested in.”
+
+CLEANUP TASKS
+- Remove/replace all UK-specific address text, UK phone numbers, and UK “branches” language.
+- Remove all WhatsApp references site-wide (including footer/header/product pages).
+- Ensure all internal links work.
+- Ensure the site builds and runs without errors.
+
+DELIVERABLE
+After making changes, output:
+1) A short list of files changed
+2) Any commands needed to run/build (if relevant)
+Do not include explanations beyond that.

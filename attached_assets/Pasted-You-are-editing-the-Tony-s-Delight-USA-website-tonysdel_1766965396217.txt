@@ -1,0 +1,60 @@
+You are editing the Tony’s Delight USA website (tonysdelight.com). Add legal and company relationship information. Do NOT redesign, refactor, or remove any existing content, sections, styling, or layout.
+
+Absolute rules
+1) Do not remove or alter existing links, sections, icons, or text unless explicitly instructed.
+2) Do not change layout, spacing, fonts, colors, or component structure.
+3) Make minimal changes and only in the files required.
+4) After completing, list exactly which files were edited and what was added.
+
+Goal
+1) Clearly state the legal ownership and contact details of Tony’s Delight USA.
+2) Clearly explain the relationship between Tony’s Delight USA and the global Tony’s Delight organization (UK, EU, India).
+
+Requirements
+
+A) Legal entity information (Footer or About section)
+1) Add the following legal disclosure text in an appropriate existing location (footer preferred, otherwise About section). Do not create a new page unless absolutely necessary.
+
+Text to add (verbatim):
+
+“Tony’s Delight USA is owned and operated by Tony’s Delight USA LLC.
+
+Registered Address:
+5900 Balcones Drive #26144
+Austin, TX 78731
+United States
+
+Phone:
++1 (512) 737-2956”
+
+2) Format this text to match the existing site style (same font, size hierarchy, colors).
+3) Do not visually overpower the page. This should read as formal legal/company information.
+
+B) Relationship between Tony’s Delight USA and Tony’s Delight Global
+1) Add a short, clear paragraph explaining the relationship between:
+   - Tony’s Delight USA
+   - Tony’s Delight UK
+   - Tony’s Delight EU
+   - Tony’s Delight Global operations (including sourcing/production in India)
+
+2) Use the following approved wording (light stylistic adjustments allowed, but do not change meaning):
+
+“Tony’s Delight USA is part of the Tony’s Delight global family of companies. Tony’s Delight operates internationally through regional entities in the United States, United Kingdom, and European Union, with global sourcing, manufacturing partnerships, and production operations rooted in India. Each regional entity operates independently while sharing the same commitment to quality, authenticity, and consistent standards across markets.”
+
+3) Do NOT imply shared legal ownership unless explicitly stated. Keep wording factual and conservative.
+
+C) Placement rules
+1) Preferred placement:
+   - Footer: legal entity info
+   - About section or footer: global relationship paragraph
+2) Do not duplicate content in multiple places unless already standard on the site.
+
+D) Verification
+1) Confirm content appears on desktop and mobile.
+2) Confirm no existing sections, links, or social icons were removed.
+3) Confirm Instagram links and “Our Regions” links still exist after changes.
+
+Deliverable
+1) List file paths edited.
+2) Brief summary of what was added.
+3) Confirm no other changes were made.

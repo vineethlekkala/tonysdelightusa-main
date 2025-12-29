@@ -1,0 +1,83 @@
+Apply smooth blur + shadow blending effects to remove all visible hard edges
+between sections and on both sides of the page.
+
+DO NOT change:
+- Text content
+- Fonts
+- Colors
+- Navbar
+- Logo
+- Buttons
+- Routes
+- Backend
+- Existing animations
+
+========================================
+1. TOP & BOTTOM BLUR BLEND (VERTICAL)
+========================================
+
+- Between the HERO section and the SECOND section:
+  - Add a smooth blur + gradient overlay.
+  - No visible hard horizontal line.
+
+- At the BOTTOM of the SECOND section:
+  - Add a dark gradient fade-out.
+  - Smoothly close the page visually.
+
+Implementation guidelines:
+- Use pseudo-elements (::before / ::after).
+- Height: ~80–120px.
+- Backdrop blur: 6px–10px.
+- Gradient opacity range: 0 → 0.6.
+
+========================================
+2. LEFT & RIGHT SIDE BLUR BLEND (HORIZONTAL)
+========================================
+
+- Apply the SAME blur + shadow effect on BOTH LEFT and RIGHT sides
+  of the hero and second section backgrounds.
+
+Purpose:
+- Remove visible vertical edges.
+- Create a soft vignette / cinematic look.
+- Make background images feel infinite and immersive.
+
+Implementation guidelines:
+- Add side overlays using pseudo-elements.
+- Width: ~60–100px on each side.
+- Gradient fade:
+  - Transparent (center) → darker (edges).
+- Optional subtle blur (4px–6px).
+
+========================================
+3. SECOND SECTION BACKGROUND SHADOW
+========================================
+
+- Add a subtle dark overlay on the SECOND section background image.
+- Improve text readability without darkening the entire image.
+
+Target effect:
+- Overlay opacity: ~0.35–0.45.
+- Gradient preferred (lighter top → darker bottom).
+
+========================================
+4. REMOVE ALL HARD EDGES
+========================================
+
+- No visible straight lines:
+  - Top
+  - Bottom
+  - Left
+  - Right
+
+- Sections must feel like one continuous canvas.
+
+========================================
+EXPECTED RESULT
+========================================
+
+- Hero and second section blend seamlessly.
+- No visible image seams or hard edges.
+- Soft blur vignette on all sides.
+- Premium, cinematic, editorial finish.
+- All content and layout remain unchanged.

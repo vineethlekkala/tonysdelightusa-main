@@ -1,0 +1,102 @@
+Apply a continuous blur + shadow blend effect on ALL SIDES (top, bottom, left, right)
+so that NO section separation is visible anywhere on the page.
+
+The page must feel like ONE single background canvas.
+
+DO NOT change:
+- Text content
+- Fonts
+- Colors
+- Navbar
+- Logo
+- Buttons
+- Routes
+- Backend logic
+- Existing layout structure
+
+================================================
+GLOBAL BLUR & BLEND REQUIREMENT
+================================================
+
+There must be:
+- NO visible horizontal separation
+- NO visible vertical separation
+- NO hard edges
+- NO image cut lines
+
+================================================
+1. TOP BLEND (UP)
+================================================
+
+- At the TOP of the second section (where it meets the hero):
+  - Apply a gradient + blur overlay.
+  - Blend hero background INTO second section background.
+  - No visible line where one ends and the other begins.
+
+Implementation:
+- Pseudo-element (::before)
+- Height: 100–140px
+- Gradient: transparent → dark
+- Backdrop blur: 8px–12px
+
+================================================
+2. BOTTOM BLEND (DOWN)
+================================================
+
+- At the BOTTOM of the second section:
+  - Apply a dark fade-out shadow.
+  - Close the page visually without a hard stop.
+
+Implementation:
+- Pseudo-element (::after)
+- Height: 100–140px
+- Gradient: transparent → dark
+- Optional blur: 6px–8px
+
+================================================
+3. LEFT & RIGHT BLEND (SIDES)
+================================================
+
+- Apply the SAME blur + shadow blending on BOTH LEFT and RIGHT edges
+  of BOTH hero and second section.
+
+Purpose:
+- Remove vertical hard edges.
+- Create a soft vignette / cinematic frame.
+- Make background images feel infinite.
+
+Implementation:
+- Side overlays using ::before / ::after or wrapper elements.
+- Width: 80–120px on each side.
+- Gradient: transparent (center) → dark (edges).
+- Blur: 6px–8px.
+
+================================================
+4. SECOND SECTION BACKGROUND SHADOW
+================================================
+
+- Add a subtle dark overlay to the second section background image.
+- Improve text readability while keeping the image visible.
+
+Target:
+- Overlay opacity: 0.35–0.45
+- Gradient preferred (lighter top → darker bottom).
+
+================================================
+5. FINAL RULES
+================================================
+
+- No borders
+- No margins creating gaps
+- No background color strips
+- No visible seams anywhere
+
+================================================
+EXPECTED RESULT
+================================================
+
+- Hero and second section visually merge.
+- Page feels like ONE continuous background.
+- Soft blur vignette on all four sides.
+- No separation is felt by the user.
+- Premium, cinematic, editorial finish.

@@ -1,0 +1,94 @@
+I am going to upload multiple brand logo images.  
+I need you to automatically:
+
+###########################################
+### 1. CREATE FOLDERS FOR BRAND LOGOS
+###########################################
+Create these folders inside /public/assets/brands/ :
+
+/public/assets/brands/homepage/        → Selected featured logos  
+/public/assets/brands/all/             → All brand logos  
+
+###########################################
+### 2. PLACE UPLOADED LOGOS IN THE RIGHT FOLDER
+###########################################
+When I upload logo files:
+
+- Put ONLY these logos into /public/assets/brands/homepage/
+    Tony's Delight  
+    AROY-D  
+    Double Horse  
+    Maggi  
+    MILO  
+    Haldiram  
+    Kings  
+    FOCO  
+
+- Every other uploaded logo must go into:
+/public/assets/brands/all/
+
+###########################################
+### 3. HOMEPAGE — SHOW ONLY FEATURED BRANDS
+###########################################
+On the homepage (index.html):
+
+Add a section titled “Featured Brands”
+Below it, show ONLY the logos inside:
+/public/assets/brands/homepage/
+
+Design requirements:
+- Responsive grid (4 columns desktop, 3 tablet, 2 mobile)
+- Card style: white background, soft shadow, rounded corners
+- Logo centered, caption below it
+- Hover: small lift effect + shadow
+- Make logos lazy-loaded
+
+###########################################
+### 4. IMPORTED BRANDS PAGE — SHOW ALL LOGOS
+###########################################
+On imported-brands.html:
+
+REMOVE these sections completely:
+- “Featured Products”
+- “Our Imported Products”
+- “Browse our selection…”
+- “No products available yet”
+- “Return to Home”
+
+REPLACE them with:
+A full responsive grid using ALL logos from:
+/public/assets/brands/all/
+
+Grid layout:
+- 6 columns desktop
+- 4 columns laptop
+- 3 columns tablet
+- 2 columns mobile
+- Clean card design (same as homepage)
+- Each card shows logo + brand name
+
+###########################################
+### 5. AUTOGENERATE BRAND NAME FROM FILE NAME
+###########################################
+For each logo:
+- Use the filename (minus extension) as the brand label  
+  Example: milo.png → “MILO”
+
+###########################################
+### 6. DO NOT CHANGE ANYTHING ELSE
+###########################################
+Do NOT modify:
+- Navbar
+- Footer
+- Backend API
+- Category product pages
+- Google Sheet logic
+
+Only update the homepage section + imported brands page + assets folders.
+
+###########################################
+### 7. AFTER I PASTE THIS PROMPT:
+###########################################
+Ask me to upload the logo files.
+As I upload each batch, place them into the correct folder.
+Then generate the updated HTML + CSS code.

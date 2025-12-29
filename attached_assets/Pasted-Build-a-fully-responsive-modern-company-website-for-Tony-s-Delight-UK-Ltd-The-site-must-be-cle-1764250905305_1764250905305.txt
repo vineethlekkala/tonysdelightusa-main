@@ -1,0 +1,261 @@
+Build a fully responsive, modern company website for “Tony’s Delight UK Ltd.”  
+The site must be clean, fast, mobile-friendly, and similar in feel to DailyDelight.com.
+
+⭐ IMPORTANT FEATURES  
+1. Navbar with these items:
+   - Home
+   - About Us
+   - Dry Products
+   - Frozen Products
+   - Seafood
+   - Imported Brands
+   - Lal Qilla Basmati
+   - Jobs
+   - Contact
+
+2. Product system powered by Google Sheets:
+   - I will replace the Google Sheet ID
+   - Sheet columns: ImageURL, Title, Description, Category
+   - Auto-group products by category (Dry Products, Frozen Products, Seafood, Imported Brands, Lal Qilla Basmati)
+   - JPG images load fast (use lazy loading)
+   - I can update products anytime by editing the Google Sheet — no redeploy needed
+
+3. Add a “Download Catalogue” button in the homepage with link: /catalogue.pdf
+
+4. Use smooth animations and modern UI layout.
+
+---
+
+############################################
+### HOME PAGE CONTENT
+############################################
+
+Hero Section:
+Title: Why Tony’s Delight UK
+Show these bullet-style features in a clean, modern layout:
+
+- We guarantee a better price than your current distributor.  
+  Enjoy true import/export-level rates — even lower if you collect from our warehouse.
+
+- WhatsApp support, any time.  
+  Get fast, direct answers when you need them.
+
+- Strict EU and Swiss food compliance.  
+  Fully compliant sourcing — now delivered to the UK.
+
+- Flexible delivery, no minimum order.  
+  We adapt to your schedule and your business needs.
+
+- In-house production in India.  
+  We respond directly to your feedback and create new product ideas for your customers.
+
+- Partner with us.  
+  For loyal customers, we invest our time, logistics, and even capital to help grow your retail business.
+
+Add a “Product Highlights” section:
+
+### Product Highlights  
+#### Featured Categories
+
+CATEGORY 1  
+Premium Basmati Rice  
+Description: Authentic Lal Qilla Basmati Rice - Aromatic, long-grain excellence for your customers  
+Button: Get Quote
+
+CATEGORY 2  
+Fresh Seafood Selection  
+Description: Frozen prawns, fish fillets, and premium seafood - Quality guaranteed, competitively priced  
+Button: Get Quote
+
+CATEGORY 3  
+Frozen Food Essentials  
+Description: Parathas, samosas, and ready-to-cook items - Authentic taste, convenient preparation  
+Button: Get Quote
+
+CATEGORY 4  
+Imported Premium Brands  
+Description: Showcase of popular imported FMCG brands  
+Button: Get Quote
+
+Include a responsive grid layout.
+
+---
+
+############################################
+### ABOUT US PAGE CONTENT
+############################################
+
+Title: Tony’s Delight UK  
+Subtitle: UK distributor of premium Indian foods & sustainably sourced seafood
+
+Intro paragraph:
+We serve wholesalers, retailers, and foodservice providers with the best quality at the best prices — backed by direct sourcing and a strong European network.
+
+### Section: Who We Are
+Tony’s Delight UK is the newest branch of a family-led food group with over 20 years in the global food trade.  
+Our UK operation is strategically located near Birmingham for fast, weekly distribution across the country.  
+We specialise in authentic Indian foods and responsibly sourced seafood from the Indian Ocean and across Asia.
+
+With deep supplier relationships and hands-on quality control from source to delivery, we consistently provide best-in-class value — quality you can trust at prices that help your business grow.
+
+### Section: Our Story
+We started from humble beginnings in Switzerland, expanded across Europe, and built our production centre in India.  
+Today, Tony’s Delight connects trusted farms, fisheries, and factories with UK businesses — bringing our brand to customers worldwide, one reliable delivery at a time.
+
+Stats section:
+- 20+ years in global food trade  
+- Strong presence across EU & CH  
+- Thousands of satisfied clients in Europe — now serving the UK  
+
+### Section: Our Mission & Vision
+Mission: Make premium Asian foods and seafood simple and accessible for UK businesses.  
+Vision: Build the most trusted UK gateway for authentic Indian foods and responsibly sourced seafood.
+
+### Section: What we’re known for
+- Best quality at the best prices — direct sourcing  
+- Fast weekly distribution near Birmingham  
+- Family-run accountability with responsive service  
+
+### Section: India & Seafood Focus
+Signature seafood:
+- Exotic Indian Ocean fish  
+- Shrimp: Black Tiger & Vannamei  
+- Crab and selected shellfish  
+
+Key Indian SKUs:
+- Premium rice  
+- Frozen staples  
+- Spices  
+- Value-added Indian products  
+
+Sourcing regions: India + Asia  
+Certifications: FSSAI, HACCP, BRCGS, MSC/ASC (where applicable)
+
+### Section: Our Global Presence
+Include a 3-column map-style layout with these:
+
+United Kingdom  
+Near Birmingham for fast weekly distribution.
+
+India  
+Production centre & export hub.
+
+Europe (EU & CH)  
+Strong European presence from NL & Switzerland.
+
+---
+
+############################################
+### JOBS PAGE CONTENT
+############################################
+
+Title: Build Your Career with Tony's Delight UK  
+Subtitle: Join our growing team. Explore our current opportunities below.
+
+Job Cards (4):
+
+1. Internship — Opportunity  
+   Gain hands-on experience in the food wholesale industry.  
+   Button: View Details
+
+2. Sales Executive — Full-time  
+   Drive business growth by working with restaurants, retailers, and wholesalers.  
+   Button: View Details
+
+3. Delivery Driver — Full-time  
+   Ensure timely and safe delivery of quality products.  
+   Button: View Details
+
+4. Social Media Content Creator & Marketing — Full-time  
+   Create engaging content and manage digital presence.  
+   Button: View Details
+
+---
+
+############################################
+### CONTACT PAGE CONTENT
+############################################
+
+Title: Contact Us  
+Subtitle: Trade enquiries welcome — wholesale pricing, fast quotes, same-day replies.
+
+Add contact form fields:
+- Your Name *
+- Company
+- Email *
+- Phone
+- Message *
+- Button: Send
+
+Also add a button: “WhatsApp instead”
+
+Add Branch Locations (multi-column responsive layout):
+
+UNITED KINGDOM (HQ)
+Tony’s Delight UK Ltd.  
+Unit 4 Britannia Business Park  
+Stourport Road, Kidderminster DY11 7PZ  
+Phone: +44 7442 712265  
+Email: info@tonysdelight.co.uk  
+
+NETHERLANDS / EUROPE  
+Tony’s Delight Europe B.V.  
+Slabbecoornweg 66, 4691 RZ Tholen, Netherlands  
+Phone: +31 613655911  
+Email: info@tonysdelighteu.com  
+
+SWITZERLAND  
+Tony Trading GmbH  
+Lehenmattstrasse 352, 4052 Basel, Switzerland  
+Email: ch@tonysdelight.co.uk  
+
+GERMANY  
+Tony’s food GmbH  
+Im Wörth 23, 79576 Weil am Rhein, Germany  
+Email: de@tonysdelight.co.uk  
+
+INDIA  
+Perumpankuzhiyil Exports  
+Thamallackal, Kumarapuram, Alappuzha, Kerala  
+Email: in@tonysdelight.co.uk  
+
+---
+
+############################################
+### FOOTER SECTION
+############################################
+
+About Tony’s Delight:
+Tony’s Delight UK Ltd. is the newest branch of the Tony’s Delight Group — a family-run business with over 20 years in international food production and distribution. Proudly expanding to the UK to bring authentic Indian and Asian flavours to businesses.
+
+Quick Links:
+(Home, About Us, Dry Products, Frozen Products, Seafood, Imported Brands, Lal Qilla Basmati, Jobs, Contact)
+
+Contact Info:
+Email: info@tonysdelight.co.uk  
+Phone: +44 7442 712265  
+Address: Unit 4 Britannia Business Park, Stourport Road, Kidderminster DY11 7PZ, UK  
+
+Social icons: WhatsApp, Instagram, Facebook  
+Add “Open in Google Maps” link.
+
+Footer line:  
+© 2025 Tony’s Delight UK Ltd. All rights reserved.
+
+---
+
+############################################
+### TECHNICAL REQUIREMENTS
+############################################
+
+- Full site must be responsive (mobile, tablet, desktop)
+- Use smooth animations + modern sections
+- Use lazy-loading for images
+- Use clean and modern fonts
+- Auto-fetch product data from Google Sheets using JavaScript
+- Add comments in code where I should paste my Google Sheet ID
+- Put placeholder images where necessary
+- Create separate pages or single-page navigation (your choice)
+- Optimise for speed (minify images, avoid heavy scripts)
+
+Now generate the complete website (HTML, CSS, JS) with organized file structure.

@@ -1,0 +1,186 @@
+Here is the **perfect Replit AI prompt** that will:
+
+### ✔ Check your backend
+
+### ✔ Check your Google Sheets integration
+
+### ✔ Check Cloudinary upload
+
+### ✔ Check category filtering
+
+### ✔ Check frontend product fetching
+
+### ✔ Test the entire workflow end-to-end
+
+### ✔ Tell you EXACTLY what is failing and how to fix it
+
+Just **copy + paste this into Replit AI**.
+
+---
+
+# 🚀 **REPLIT AI PROMPT — CHECK FULL PRODUCT WORKFLOW**
+
+**Replit, I need you to diagnose my entire product system end-to-end.
+Here is the workflow I currently have:**
+
+```
+Admin Upload Page (React)
+ → sends title, description, category, imageBase64
+ → to backend POST /api/admin/upload-product
+ → backend handles Cloudinary upload
+ → backend appends a new row into Google Sheet
+ → frontend pages read products from backend GET /api/products
+ → category pages read GET /api/products/:category
+ → website should display new products automatically
+```
+
+**However, products uploaded through Cloudinary are NOT appearing on the website.
+Please run the following diagnostic steps and fix anything that is broken:**
+
+---
+
+## ✅ **1. Verify Backend is Running**
+
+* Ensure the backend at `/server/src/server.js` is running properly
+* Ensure the `.env` file is loaded
+* Ensure backend logs show no crashing
+
+---
+
+## ✅ **2. Test Product API**
+
+Test these URLs:
+
+* `/api/products`
+* `/api/products/Seafood`
+* `/api/products/Dry%20Products`
+* `/api/products/Frozen%20Products`
+* `/api/products/Imported%20Brands`
+* `/api/products/Lal%20Qilla%20Basmati`
+
+**Confirm whether they return real product data or empty arrays.**
+
+---
+
+## ✅ **3. Verify Google Sheets Connectivity**
+
+Check:
+
+* `.env` has correct `GOOGLE_SHEET_ID`
+* Google Sheet is named **Sheet1**
+* Columns: `ImageURL | Title | Description | Category`
+* Service account JSON file path is correct:
+
+  ```
+  GOOGLE_SERVICE_ACCOUNT_KEY_PATH=./src/config/google-service-account.json
+  ```
+* Google Sheet is shared with service account email
+
+If any of these are wrong, fix them.
+
+---
+
+## ✅ **4. Check Cloudinary Upload Logic**
+
+Inspect the file:
+
+```
+server/src/services/cloudinaryService.js
+```
+
+Verify Cloudinary upload returns:
+
+* valid URL
+* correct folder path
+* correct returned `secure_url`
+
+Confirm the URL is passed correctly into:
+
+```
+appendProductRow(imageUrl, title, description, category)
+```
+
+---
+
+## ✅ **5. Verify Google Sheet Row Appending**
+
+Check:
+
+* `/api/admin/upload-product` actually appends a row
+* Validate using direct Google Sheet read
+* If not writing, fix:
+
+  * service account permissions
+  * Sheets API scopes
+  * incorrect sheet range
+
+---
+
+## ✅ **6. Validate Category Matching**
+
+Ensure category names saved in Google Sheet EXACTLY match frontend filters:
+
+```
+Seafood
+Dry Products
+Frozen Products
+Imported Brands
+Lal Qilla Basmati
+```
+
+If not, normalize categories before inserting.
+
+---
+
+## ✅ **7. Validate Frontend Fetch**
+
+Check:
+
+```
+client/src/lib/google-sheets.ts
+client/src/pages/Products.tsx
+```
+
+Ensure they fetch from the backend URL:
+
+```
+https://<replit-backend-url>/api/products
+```
+
+NOT from localhost.
+
+Fix CORS if needed.
+
+---
+
+## ✅ **8. Output a FULL REPORT**
+
+I want a detailed diagnostic report:
+
+* Which step failed
+* Which URLs returned empty data
+* If Google Sheet was not updated
+* If Cloudinary upload worked
+* If category filtering failed
+* If frontend fetch URL is wrong
+* If .env is wrong
+* If service account lacks permission
+* If sheet range is wrong
+
+Then fix the incorrect parts automatically.
+
+---
+
+## 🚀 Final Output Requirements:
+
+* Tell me EXACTLY why new products are not appearing
+* Fix all broken components
+* Confirm once the system is fully operational
+* Provide new URLs to test
+* Print sample JSON response from API
+
+---
+
+# 👍 **RUN THIS PROMPT IN REPLIT AI NOW**
+
+Once Replit gives you the diagnostics, paste the results here and I will continue debugging with you.

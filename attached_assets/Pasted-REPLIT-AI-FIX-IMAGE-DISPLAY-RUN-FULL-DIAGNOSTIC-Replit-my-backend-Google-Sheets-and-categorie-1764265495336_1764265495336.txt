@@ -1,0 +1,193 @@
+REPLIT AI: FIX IMAGE DISPLAY + RUN FULL DIAGNOSTIC
+
+Replit, my backend, Google Sheets, and categories are working.
+BUT the product images are NOT showing on the frontend, even though the Cloudinary URL loads fine in the browser.
+I need you to diagnose and fix ALL issues related to image loading.
+
+Perform ALL the steps below:
+
+🟣 1. Check API Response (Backend → Frontend Field Name)
+
+Open:
+
+server/src/services/googleSheetsService.js
+
+
+Verify that the backend is returning products like:
+
+{
+  imageUrl: "...",
+  title: "...",
+  description: "...",
+  category: "..."
+}
+
+
+If backend is returning ANY of these:
+
+ImageURL
+imageURL
+img
+image
+imageurl
+
+
+→ Normalize it to:
+
+imageUrl
+
+
+THIS FIELD MUST MATCH EXACTLY.
+
+Add a debug:
+
+console.log("PRODUCTS FROM SHEET:", products);
+
+🟣 2. Log Products in Frontend to Inspect Field Names
+
+Inside:
+
+client/src/components/ui/product-card.tsx
+
+
+Before the return statement add:
+
+console.log("Product received by card:", product);
+
+
+This reveals:
+
+Does product.imageUrl exist?
+
+Is the frontend receiving the correct field?
+
+Is the field empty or undefined?
+
+🟣 3. Fix the <img> Element Completely
+
+Replace ANY existing <img> tag with this EXACT code:
+
+<img
+  src={product.imageUrl}
+  alt={product.title}
+  className="w-full h-auto object-cover rounded-xl"
+  loading="lazy"
+  onError={(e) => {
+    console.error("Image failed to load:", product.imageUrl);
+    e.currentTarget.src = "https://via.placeholder.com/300x300?text=No+Image";
+  }}
+/>
+
+
+This makes sure:
+
+Image URL loads
+
+Broken URLs show console error
+
+You get a fallback placeholder
+
+Hydration issues are removed
+
+🟣 4. Check That Product Grid Is Not Hiding the Image
+
+Open:
+
+client/src/components/ui/product-card.tsx
+
+
+Remove any of these classes if they exist:
+
+overflow-hidden
+h-0
+max-h-0
+opacity-0
+invisible
+absolute
+hidden
+
+
+These can hide your image completely.
+
+🟣 5. Check Parent Container in Products.tsx
+
+Open:
+
+client/src/pages/Products.tsx
+
+
+Ensure container has:
+
+className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"
+
+
+Not:
+
+h-0
+overflow-hidden
+opacity-0
+
+🟣 6. Confirm That Category Mapping Uses Correct Category Names
+
+Replace mapping logic:
+
+const CATEGORY_MAP = {
+  seafood: "Seafood",
+  "dry-products": "Dry Products",
+  "frozen-products": "Frozen Products",
+  "imported-brands": "Imported Brands",
+  "lal-qilla-basmati": "Lal Qilla Basmati",
+};
+
+
+And ensure fetch call uses:
+
+fetchProductsByCategory(CATEGORY_MAP[slug]);
+
+🟣 7. Verify Cloudinary URLs Aren’t Modified by React or Vite
+
+Sometimes Vite rewrites strings.
+
+Inside product-card, add:
+
+console.log("Rendered image URL:", product.imageUrl);
+
+
+If it looks encoded incorrectly:
+
+Fix by prepending:
+
+new URL(product.imageUrl).toString()
+
+🟣 8. Run a Final Diagnostic
+
+After applying all fixes, generate a FULL REPORT containing:
+
+The exact product object received by frontend
+
+Whether product.imageUrl exists
+
+Whether <img> triggers error handler
+
+Whether Cloudinary URL hits network tab
+
+Whether category is correct
+
+Whether backend returns imageUrl correctly
+
+Whether Tailwind/CSS hides images
+
+Final rendering status
+
+🟣 9. Apply All Fixes Directly
+
+Update all affected files:
+
+client/src/components/ui/product-card.tsx
+client/src/pages/Products.tsx
+client/src/lib/google-sheets.ts
+server/src/services/googleSheetsService.js
+
+🚀 END OF PROMPT
+
+Run all diagnostics and apply all fixes automatically. Provide a detailed final report.

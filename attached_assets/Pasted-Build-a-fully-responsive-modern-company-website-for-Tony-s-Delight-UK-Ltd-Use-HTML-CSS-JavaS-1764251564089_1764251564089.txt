@@ -1,0 +1,226 @@
+Build a fully responsive, modern company website for “Tony’s Delight UK Ltd.”  
+Use HTML, CSS, JavaScript and a lightweight backend (Node.js + Express).  
+The backend must fetch Google Sheet data using Google Sheets API or public JSON feed.
+
+############################################
+### CORE REQUIREMENTS
+############################################
+
+1. NAVBAR (LEFT LOGO + RIGHT MENU)
+- Add logo upload support on the leftmost side (placeholder image now, I will replace).  
+- Menu items (aligned right):
+  Home  
+  About Us  
+  Dry Products  
+  Frozen Products  
+  Seafood  
+  Imported Brands  
+  Lal Qilla Basmati  
+  Jobs  
+  Contact  
+
+2. PRODUCT SYSTEM (MUST BE BACKEND-CONTROLLED)
+- Create a backend endpoint: `/api/products`  
+- Data must come from a Google Sheet  
+- Google Sheet columns:
+    ImageURL  
+    Title  
+    Description  
+    Category  
+- ALL category pages (Dry Products, Frozen Products, Seafood, Imported Brands, Lal Qilla Basmati)  
+  must display ONLY products pulled from the Google Sheet.
+- If no product exists for a category, show “No products available yet.”
+
+3. REMOVE “Download Catalogue” FROM NAVBAR
+- Instead, place a large “Download Catalogue (PDF)” button on the HOME page  
+- Place another link in the FOOTER (small text link)
+
+4. SUPER FAST LOADING
+- Use image lazy-loading  
+- Load images via CDN URLs (Google Drive image URL works)  
+- Cache API response  
+- Smooth animations  
+- Modern UI like DailyDelight
+
+############################################
+### HOME PAGE CONTENT
+############################################
+
+Hero Section:
+Title: Why Tony’s Delight UK  
+Bullet-style feature grid:
+
+- Best price guarantee compared to current distributor  
+  Enjoy true import/export-level rates — even lower if collected from our warehouse.
+
+- WhatsApp support, any time  
+  Fast, direct answers.
+
+- Strict EU + Swiss food compliance  
+  Fully compliant sourcing.
+
+- Flexible delivery, no minimum order  
+  We adapt to your schedule.
+
+- In-house production in India  
+  Direct response to retailer feedback.
+
+- Partnership approach  
+  For loyal customers, we invest logistics, support, even capital.
+
+Add a “Download Catalogue (PDF)” prominent button ON HOME PAGE.
+
+Product Highlights Section (static preview cards):
+- Premium Basmati Rice — “Get Quote”
+- Fresh Seafood Selection — “Get Quote”
+- Frozen Food Essentials — “Get Quote”
+- Imported Premium Brands — “Get Quote”
+
+############################################
+### ABOUT US PAGE CONTENT
+############################################
+
+Tony’s Delight UK  
+UK distributor of premium Indian foods & sustainably sourced seafood
+
+Intro:
+We serve wholesalers, retailers, and foodservice providers with the best quality at the best prices — backed by direct sourcing and a strong European network.
+
+Section: Who We Are  
+Tony’s Delight UK is the newest branch of a family-led food group with over 20 years in the global food trade…  
+(Include all text exactly as provided.)
+
+Section: Our Story  
+(Include full story provided.)
+
+Stats:
+- 20+ years in global food trade  
+- Strong EU + CH presence  
+- Thousands of satisfied clients  
+
+Mission, Vision  
+Full text from user prompt.
+
+What We’re Known For  
+Full list provided.
+
+Sections:  
+- India & Seafood Focus  
+- Signature seafood  
+- Key Indian SKUs  
+- Sourcing regions  
+- Certifications  
+- Global presence (UK, India, Europe)
+
+############################################
+### JOBS PAGE CONTENT
+############################################
+
+Build Your Career with Tony’s Delight UK  
+Subtitle: Explore our opportunities
+
+Job Cards:
+- Internship  
+- Sales Executive  
+- Delivery Driver  
+- Social Media & Marketing  
+Each with “View Details” button.
+
+############################################
+### CONTACT PAGE CONTENT
+############################################
+
+Contact Us  
+Subtitle: Trade enquiries welcome — wholesale pricing, fast quotes, same-day replies.
+
+Contact form fields:
+Your Name *  
+Company  
+Email *  
+Phone  
+Message *  
+Submit button  
+Add another button: “WhatsApp instead”
+
+Branches:
+(Include all locations exactly as provided.)
+
+############################################
+### FOOTER CONTENT
+############################################
+
+Left column:
+About Tony’s Delight  
+(Insert paragraph provided by user.)
+
+Middle column: Quick Links  
+(Home, About Us, Dry Products, Frozen Products, Seafood, Imported Brands, Lal Qilla Basmati, Jobs, Contact)
+
+Right column: Contact Info  
+Email: info@tonysdelight.co.uk  
+Phone: +44 7442 712265  
+Address: Unit 4 Britannia Business Park, Stourport Road, Kidderminster DY11 7PZ, UK  
+
+Social Icons:
+WhatsApp, Instagram, Facebook  
+And link: “Open in Google Maps”
+
+Bottom line:  
+© 2025 Tony’s Delight UK Ltd. All rights reserved.
+
+############################################
+### BACKEND REQUIREMENTS
+############################################
+
+Use Node.js + Express.
+
+Backend endpoints:
+1. GET /api/products  
+   - Fetch data from Google Sheet  
+   - Convert each row into JSON  
+   - Return array of products sorted by category  
+   - Cache results for 5 minutes for speed
+
+2. GET /api/products/:category  
+   - Return only items matching that category
+
+Make sure frontend pages dynamically load products via JavaScript:
+Example:
+fetch("/api/products?category=Frozen Products")
+
+############################################
+### FRONTEND REQUIREMENTS
+############################################
+
+- Fully responsive (mobile, tablet, desktop)
+- Logo visible on left side of navbar
+- Animation on scroll
+- Category pages MUST fetch data only from backend
+- Home page & About page static content
+- Jobs & Contact pages static
+- Use clean typography, spacing, and professional-looking layout
+- Include placeholder logo + placeholder images where needed
+- Code comments showing where to replace:
+  - Google Sheet ID
+  - Logo image
+  - Catalogue PDF
+  - Contact email/phone
+
+############################################
+### OUTPUT FORMAT
+############################################
+
+Provide:
+- index.html (Home)
+- about.html  
+- jobs.html  
+- contact.html  
+- category pages: dry-products.html, frozen-products.html, seafood.html, imported-brands.html, lal-qilla-basmati.html
+- styles.css  
+- script.js  
+- backend: server.js  
+- product loader: sheets.js  
+- public/assets folder  
+- Clear instructions for where to paste Google Sheet ID
+
+Generate the full file structure + complete code.

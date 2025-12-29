@@ -1,0 +1,181 @@
+REPLIT AI — FIX PRODUCT IMAGE NOT LOADING (FULL AUTOMATED FIX)
+
+Replit, my Cloudinary URL is correct and loads in the browser, but my product images are NOT displaying on the website. The rest of the product data works.
+I need you to fully diagnose and fix ALL image-display problems.
+Follow ALL steps below exactly:
+
+🟣 1. VERIFY BACKEND → FRONTEND FIELD NAME
+
+Open:
+
+server/src/services/googleSheetsService.js
+
+
+Check what the backend returns.
+
+Normalize the product object to exactly:
+
+{
+  imageUrl: row[0],
+  title: row[1],
+  description: row[2],
+  category: row[3]
+}
+
+
+If it returns:
+
+ImageURL
+imageURL
+image
+img
+url
+
+
+Fix it so the field is ALWAYS → imageUrl
+
+Add debug:
+
+console.log("API Product:", products);
+
+🟣 2. VERIFY FRONTEND IS USING THE CORRECT FIELD NAME
+
+Open:
+
+client/src/components/ui/product-card.tsx
+
+
+Inside the component, add:
+
+console.log("Frontend Product:", product);
+
+
+Ensure the <img> uses the EXACT field:
+
+<img
+  src={product.imageUrl}
+  alt={product.title}
+  className="w-full h-auto object-cover rounded-xl"
+  loading="lazy"
+  onError={() => console.error("IMAGE FAILED:", product.imageUrl)}
+/>
+
+
+If the file currently uses:
+
+product.ImageURL
+product.imageURL
+product.image
+product.img
+product.url
+
+
+→ Replace with product.imageUrl
+
+React is case-sensitive.
+Even imageURL vs imageUrl will break the image.
+
+🟣 3. CHECK IF ANY CSS IS HIDING THE IMAGE
+
+Open:
+
+client/src/components/ui/product-card.tsx
+
+
+Remove ANY of these if present:
+
+hidden
+opacity-0
+h-0
+max-h-0
+invisible
+absolute
+overflow-hidden
+
+
+Also check parent container in:
+
+client/src/pages/Products.tsx
+
+
+Make sure card wrapper is NOT forcing zero height.
+
+🟣 4. TEST CLOUDINARY URL IN THE BROWSER
+
+Confirm the URL returned in:
+
+/api/products
+
+
+is EXACTLY the same URL stored in Google Sheet.
+
+If Cloudinary URL contains:
+
+...
+“...”
+
+
+→ It is broken.
+
+If yes, fix the mapping so backend reads the full URL.
+
+🟣 5. CONFIRM API RETURNS imageUrl PROPERLY
+
+Run:
+
+https://<replit-backend-url>/api/products
+
+
+Replit, check this response inside the code and confirm:
+
+imageUrl exists
+
+imageUrl is a valid URL string
+
+imageUrl matches Google Sheet URL
+
+If not, FIX THE MAPPING.
+
+🟣 6. OPTIONAL — ADD FALLBACK IMAGE
+
+In product-card.tsx, include:
+
+onError={(e) => {
+  e.currentTarget.src = "https://via.placeholder.com/400?text=No+Image";
+}}
+
+
+This ensures UI never breaks.
+
+🟣 7. AFTER FIXES → RUN FULL DIAGNOSTIC
+
+Replit, generate a final diagnostic:
+
+Show me 1 complete product object as seen by the frontend
+
+Show me the exact imageUrl field
+
+Show console logs for image failures
+
+Confirm <img> element is rendered
+
+Confirm CSS is not hiding the image
+
+Confirm backend returns full Cloudinary URL
+
+Confirm Google Sheet row is being used
+
+Confirm final image loads correctly in browser
+
+🟣 8. APPLY ALL CHANGES AUTOMATICALLY
+
+Update ALL required files:
+
+server/src/services/googleSheetsService.js
+client/src/components/ui/product-card.tsx
+client/src/pages/Products.tsx
+client/src/lib/google-sheets.ts
+
+✅ END OF PROMPT
+
+Fix the image loading completely and provide a final working report.

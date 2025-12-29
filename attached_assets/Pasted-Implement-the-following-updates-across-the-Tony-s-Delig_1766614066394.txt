@@ -1,0 +1,42 @@
+Implement the following updates across the Tony’s Delight USA site. Do NOT change any existing styling, layout, or content except where required to add these items. Keep changes minimal and consistent with existing components.
+
+REQUIREMENTS
+1) Add Instagram links for all regions:
+   - USA Instagram: https://www.instagram.com/tonysdelightusa/ (username: @tonysdelightusa)
+   - UK Instagram: https://www.instagram.com/tonysdelightuk/ (username: @tonysdelightuk)
+   - EU Instagram: https://www.instagram.com/tonysdelighteu/ (username: @tonysdelighteu)
+2) Add a link to the UK website: https://tonysdelight.co.uk
+3) EU website is “coming soon” (do NOT invent a URL for EU website)
+4) Add a new Jobs section/page if it doesn’t exist.
+   - Route: /jobs
+   - Purpose: recruiting page
+   - Applicants should contact us via email: info@tonysdelight.com
+5) Add navigation link to Jobs in the header nav and footer quick links.
+
+WHERE TO ADD LINKS (be smart)
+- Add a new footer section titled “Our Regions” with:
+  - USA: Instagram link
+  - UK: UK website link + UK Instagram link
+  - EU: EU Instagram link + text “Website coming soon”
+- Also add a short “Social” section on the Contact page with the same links (USA/UK/EU + UK website).
+
+JOBS PAGE CONTENT (use this exact copy)
+Title: Jobs
+Intro paragraph:
+“Tony’s Delight USA is growing. We are looking for talented, motivated people who want to help build a premium imported foods business in the United States.”
+Section: Who we’re looking for
+“We are especially interested in candidates with experience in wholesale distribution, food import operations, warehousing and logistics, customer experience, sales partnerships, and brand building.”
+Section: How to apply
+“Email us at info@tonysdelight.com with your resume or LinkedIn profile, your location, and a short note on how you can help Tony’s Delight USA grow.”
+Section: Note
+“We review every message. If there is a fit, our team will reach out to schedule a conversation.”
+
+META (if the project supports it)
+- Jobs title: “Jobs | Tony’s Delight USA”
+- Jobs description: “Join Tony’s Delight USA. We’re hiring talented candidates across wholesale distribution, logistics, and brand growth. Email info@tonysdelight.com to apply.”
+
+DELIVERABLE
+After implementing, output:
+1) Files changed/created
+2) How to run/build
+3) Confirm these exist and are linked: footer “Our Regions” section, Contact page “Social” section, /jobs page, header link to Jobs, footer link to Jobs.

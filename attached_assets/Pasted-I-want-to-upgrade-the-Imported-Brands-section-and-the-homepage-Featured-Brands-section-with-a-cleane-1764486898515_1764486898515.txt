@@ -1,0 +1,135 @@
+I want to upgrade the Imported Brands section and the homepage Featured Brands section with a cleaner, more premium layout.
+
+Apply ALL of the following changes:
+
+###################################################
+### 1. IMPROVE BRAND GRID LAYOUT
+###################################################
+Update both the homepage brand section and the imported-brands.html brand grid.
+
+- Center the grid on the page
+- Reduce excessive left-right whitespace
+- Use consistent spacing between cards (gap: 24px)
+- Use a clean modern layout:
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      justify-items: center;
+      align-items: center;
+
+- On mobile: 2 columns
+- On tablet: 3 columns
+- On desktop: 6 columns
+
+###################################################
+### 2. MAKE ALL BRAND CARDS THE SAME SIZE
+###################################################
+Each brand card must have:
+
+.brand-card {
+    width: 160px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border-radius: 14px;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: all 0.2s ease;
+}
+
+.brand-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+###################################################
+### 3. MAKE ALL LOGOS VISUALLY UNIFORM
+###################################################
+Fix the <img> inside brand cards:
+
+.brand-logo {
+    width: 100%;
+    height: 90px;
+    object-fit: contain;
+    margin-bottom: 8px;
+    display: block;
+}
+
+This ensures:
+- No stretching
+- All logos centered
+- All logos scale evenly
+
+###################################################
+### 4. CLEAN BRAND NAME STYLING
+###################################################
+Below the logo, show brand name:
+
+.brand-name {
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    color: #333;
+    margin-top: 4px;
+}
+
+Remove any hyperlinks, underlines, or repeated names.
+
+###################################################
+### 5. ADD A SEARCH BAR TO FILTER BRAND LOGOS
+###################################################
+Above the brand grid (on imported-brands.html only):
+
+Add a search bar:
+
+<input 
+  type="text" 
+  id="brandSearch" 
+  placeholder="Search brands..." 
+  class="brand-search"
+/>
+
+Style the search bar:
+
+.brand-search {
+    width: 280px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+###################################################
+### 6. JAVASCRIPT FILTER FUNCTION
+###################################################
+Add this script to filter logos in real-time:
+
+<script>
+document.getElementById("brandSearch").addEventListener("input", function() {
+    const term = this.value.toLowerCase();
+    document.querySelectorAll(".brand-card").forEach(card => {
+        const name = card.querySelector(".brand-name").textContent.toLowerCase();
+        card.style.display = name.includes(term) ? "flex" : "none";
+    });
+});
+</script>
+
+###################################################
+### 7. DO NOT MODIFY ANYTHING ELSE
+###################################################
+- Do NOT change backend or API
+- Do NOT change navbar or footer
+- Do NOT change product category pages
+- Only update logo grid styling + search bar + JS filter
+- Maintain existing folder structure for images
+
+###################################################
+### FILES TO UPDATE
+###################################################
+- imported-brands.html
+- index.html (homepage brand section)
+- styles.css
+- script.js (if needed)

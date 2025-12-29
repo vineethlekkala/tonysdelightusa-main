@@ -1,0 +1,150 @@
+Redesign ONLY the About page (about.html, styles.css, script.js) to make it clean, modern, premium, and fully responsive — WITHOUT using any images or photos.
+
+IMPORTANT:
+- Do NOT add any images.
+- Do NOT use background photos.
+- Do NOT modify backend, other pages, navbar, or footer.
+- This redesign applies ONLY to about.html, styles.css, and optional JS animations.
+
+##############################################
+### DESIGN GOAL
+##############################################
+Create a professional, corporate-quality About page that looks premium and modern using ONLY:
+
+- Typography  
+- Icons (SVG or CSS-based)  
+- Clean color blocks  
+- Section dividers  
+- Shapes (yellow/blue blobs or soft geometric shapes)  
+- Cards with shadows  
+- Responsive grids  
+- Smooth scroll animations  
+
+NO stock photos  
+NO hero images  
+NO decorative photos
+
+##############################################
+### HERO SECTION (NO IMAGES)
+##############################################
+- Full-width solid background (navy or dark theme)
+- White text centered
+- Title:
+  “Tony’s Delight UK”
+- Subtitle:
+  “UK distributor of premium Indian foods & sustainably sourced seafood”
+- Soft fade-in animation
+- Responsive text scaling
+
+##############################################
+### INTRO PARAGRAPH
+##############################################
+- Center aligned
+- Constrained width (max 900px)
+- Larger font, relaxed spacing
+- Fade-up animation
+
+##############################################
+### WHO WE ARE — TWO COLUMN LAYOUT (NO IMAGES)
+##############################################
+Left Column:
+- Heading “Who We Are”
+- Full paragraph text as provided
+
+Right Column:
+- A modern card with:
+  - Heading “Our Story”
+  - Paragraph text
+  - Three statistic blocks:
+      • 20+ Years  
+      • EU & CH Presence  
+      • 1000s of Clients  
+- Add icons (CSS or small inline SVGs)
+- Use soft shadows, rounded corners
+- Add abstract shapes behind the card (CSS-based)
+
+On mobile:
+- Stack columns vertically
+- Maintain generous spacing
+
+##############################################
+### MISSION & VISION (NO IMAGES)
+##############################################
+Use a split layout:
+
+Left block:
+- Heading “Mission”
+- Paragraph text
+- Icon (inline SVG)
+
+Right block:
+- Heading “Vision”
+- Paragraph text
+- Icon (inline SVG)
+
+Use a diagonal or subtle colored background behind this section (no photos).
+
+##############################################
+### WHAT WE'RE KNOWN FOR (NO IMAGES)
+##############################################
+Create a modern icon-list layout:
+
+- Two-column layout (desktop)
+- Single-column layout (mobile)
+- Each bullet point gets an icon:
+  - Checkmark or badge icon (SVG)
+- Use spacing, shadows, and grid layout
+
+##############################################
+### INDIA & SEAFOOD FOCUS (NO IMAGES)
+##############################################
+Create a clean text section with:
+
+- Two-column grid  
+- “Signature Seafood” block  
+- “Key Indian SKUs” block  
+- Bullet lists with icons  
+- Subtle colored background or shape divider  
+
+##############################################
+### GLOBAL PRESENCE (NO IMAGES)
+##############################################
+Create 3 equal-size cards:
+
+- United Kingdom
+- India
+- Europe (EU & CH)
+
+Each card should include:
+- Heading
+- Paragraph
+- A small inline icon (map marker, globe, etc.)
+- Hover elevation effect
+- Fade-in animation
+
+##############################################
+### GENERAL DESIGN RULES
+##############################################
+- ZERO images
+- High-contrast, clean typography
+- Modern spacing and layout
+- Use brand colors: navy, gold/yellow, white
+- Use CSS shapes for decoration (blobs or geometric)
+- Smooth scroll animations using CSS or JS (AOS/GSAP allowed)
+- 100% responsive on all screens
+
+##############################################
+### FILES TO UPDATE
+##############################################
+- about.html
+- styles.css
+- script.js (animations only)
+
+##############################################
+### DO NOT CHANGE
+##############################################
+- Navbar
+- Footer
+- Backend or API
+- Other pages
+- Homepage hero setup

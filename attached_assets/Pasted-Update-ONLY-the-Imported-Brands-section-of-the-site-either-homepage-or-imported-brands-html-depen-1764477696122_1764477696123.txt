@@ -1,0 +1,100 @@
+Update ONLY the “Imported Brands” section of the site (either homepage or imported-brands.html depending on where it exists).
+
+GOAL:
+Add a full grid of brand logos exactly as shown in my reference image. These logos include:
+
+Tony’s Delight  
+AROY-D  
+Double Horse  
+Haldiram  
+Kings  
+FOCO  
+Healthy Boy  
+Maggi  
+MILO  
+TRS  
+COCK  
+Mogu Mogu  
+MD  
+SAWAT-D  
+Dettol  
+Nongshim  
+Horlicks  
+Periyar  
+Uni-Eagle  
+VICCO  
+Himalaya  
+Maekrua  
+Spring Home  
+Squid Brand  
+Parle  
+Britannia  
+Shan  
+Shezan  
+Pavizham  
+Dabur  
+Cycle  
+Gits  
+MTR  
+MDH  
+Nestomalt  
+Boost
+
+##########################################
+### SECTION DESIGN REQUIREMENTS
+##########################################
+
+1. Create a **clean, modern, responsive logo grid**:
+   - 6 columns on large desktop
+   - 4 columns on laptop
+   - 3 columns on tablet
+   - 2 columns on mobile
+   - Each logo inside a white rounded card box
+   - Soft shadow + hover lift effect
+   - Light border or subtle outline for premium look
+
+2. IMAGE HANDLING:
+   - Place all logo images in: /public/assets/imported-brands/
+   - Filenames should match the brand names (e.g., maggi.png, haldiram.png)
+   - Use `<img loading="lazy">` for fast performance
+   - Ensure logos scale properly without distortion
+
+3. TEXT:
+   - Each logo card must have a caption under the logo (brand name)
+   - Clean font, centered text
+
+4. SECTION HEADER:
+   - Keep the section title as:
+       “Imported Brands”
+   - Add a small subtitle:
+       “Our partnered premium FMCG brands from across Asia and beyond.”
+
+5. REMOVE ANY OLD STATIC IMAGE or placeholder section.
+
+6. KEEP CATEGORY LOGIC:
+   - Imported Brands category products (from Google Sheet) must still appear BELOW the logo grid.
+   - The logo grid is STATIC.
+   - The product grid remains DYNAMIC (from /api/products/Imported%20Brands).
+
+##########################################
+### RESPONSIVENESS
+##########################################
+- Logos must resize smoothly on all devices.
+- Grid must stack elegantly without huge spacing gaps.
+- Cards should keep equal height even if logos have different aspect ratios.
+
+##########################################
+### FILES TO UPDATE
+##########################################
+- imported-brands.html (or homepage section if that’s where it is)
+- styles.css (logo grid + card styling)
+- script.js only if needed (not required for static grid)
+- /public/assets/imported-brands/ (add all logo PNGs)
+
+##########################################
+### DO NOT MODIFY
+##########################################
+- Backend / API logic
+- Navbar or footer
+- Other category sections
+- Google Sheet integration

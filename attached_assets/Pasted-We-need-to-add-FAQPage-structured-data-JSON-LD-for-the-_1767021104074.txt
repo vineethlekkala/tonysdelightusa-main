@@ -1,0 +1,117 @@
+We need to add FAQPage structured data (JSON-LD) for the /faq page to improve SEO and AI search understanding.
+
+ABSOLUTE RULES
+1) Do NOT change UI, layout, styling, or visible FAQ content.
+2) Do NOT alter routing, SPA behavior, or existing bot snapshot logic.
+3) Add FAQPage JSON-LD ONLY on the /faq page.
+4) Use JSON-LD only (no microdata).
+5) Ensure bots AND humans receive the schema correctly.
+
+WHERE TO ADD
+- Add FAQPage JSON-LD to:
+  A) The SPA-rendered /faq page (via head injection when route = /faq)
+  B) The bot snapshot file: server/snapshots/faq.html
+
+DO NOT add FAQ schema globally. Only for /faq.
+
+FAQ CONTENT (USE EXACTLY THIS)
+
+Questions and answers must match site intent and remain conservative.
+
+FAQ 1
+Question: Do you sell directly to consumers?
+Answer: No. Tony’s Delight USA focuses on wholesale and distribution partnerships. We do not sell directly to individual consumers.
+
+FAQ 2
+Question: Who can work with Tony’s Delight USA?
+Answer: We work with retailers, distributors, foodservice operators, and select brand partners looking for wholesale distribution in the United States.
+
+FAQ 3
+Question: What types of products do you distribute?
+Answer: Our portfolio includes dry goods, frozen products, seafood, and select imported international food brands.
+
+FAQ 4
+Question: What regions do you serve?
+Answer: Tony’s Delight USA is building its distribution footprint across the United States. Availability may vary by product and partner.
+
+FAQ 5
+Question: How do I place a wholesale enquiry?
+Answer: Wholesale and partnership enquiries can be submitted by emailing info@tonysdelight.com or through the contact page.
+
+FAQ 6
+Question: Do you help international brands enter the U.S. market?
+Answer: Yes. We selectively support international food and consumer packaged goods brands with U.S. market entry, distribution guidance, and operational alignment.
+
+JSON-LD FORMAT (FAQPage)
+
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you sell directly to consumers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Tony’s Delight USA focuses on wholesale and distribution partnerships. We do not sell directly to individual consumers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who can work with Tony’s Delight USA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We work with retailers, distributors, foodservice operators, and select brand partners looking for wholesale distribution in the United States."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What types of products do you distribute?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our portfolio includes dry goods, frozen products, seafood, and select imported international food brands."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What regions do you serve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tony’s Delight USA is building its distribution footprint across the United States. Availability may vary by product and partner."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I place a wholesale enquiry?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wholesale and partnership enquiries can be submitted by emailing info@tonysdelight.com or through the contact page."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you help international brands enter the U.S. market?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We selectively support international food and consumer packaged goods brands with U.S. market entry, distribution guidance, and operational alignment."
+      }
+    }
+  ]
+}
+
+IMPLEMENTATION NOTES
+- Inject the JSON-LD into the <head> of the /faq route.
+- Inject the same JSON-LD into server/snapshots/faq.html for crawler responses.
+- Ensure it does not duplicate Organization JSON-LD.
+- Ensure valid JSON (no trailing commas).
+
+VERIFICATION REQUIRED
+After implementation, confirm:
+1) View-source on /faq shows FAQPage JSON-LD
+2) curl -A "OAI-SearchBot" https://tonysdelight.com/faq returns FAQPage JSON-LD
+3) No console errors
+4) No visible UI changes
+
+Report back:
+- Files modified
+- Where the FAQ schema is injected

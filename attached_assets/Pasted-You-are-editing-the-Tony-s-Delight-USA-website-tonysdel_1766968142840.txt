@@ -1,0 +1,91 @@
+You are editing the Tony’s Delight USA website (tonysdelight.com).
+
+Absolute rules
+1) Do NOT remove or modify any existing pages, links, social icons, Instagram links, or content.
+2) Do NOT redesign the site or change styling, spacing, typography, or layout.
+3) Add only what is explicitly requested.
+4) Use existing layout/components where possible.
+5) After completing, list the exact file paths created or edited.
+
+Goal
+Add a future-facing B2B page explaining how Tony’s Delight USA supports international food and CPG brands entering the United States market, including distribution, branding guidance, and Amazon enablement.
+
+Page details
+
+Route:
+- /for-brands
+
+Navigation:
+- Add a header navigation link labeled “For Brands”
+- Add a footer link under Company or Quick Links labeled “For Brands”
+- Do NOT remove or reorder existing nav or footer links
+
+Meta
+- Title: For Brands | Tony’s Delight USA
+- Description: Tony’s Delight USA supports international food and CPG brands exploring U.S. market entry, distribution, branding, and Amazon enablement.
+
+Page content (use this copy verbatim, adjusting formatting only to match existing components)
+
+Title:
+For Brands
+
+Intro:
+Tony’s Delight USA works with select international food and consumer packaged goods brands exploring entry into the United States market. Built from real-world importing, distribution, and e-commerce experience, we help brands navigate the early stages of U.S. expansion with clarity and structure.
+
+Section: Who this is for
+This program is designed for established international brands that are:
+- Based outside the United States
+- Preparing for or exploring U.S. market entry
+- Interested in wholesale distribution, retail placement, or e-commerce
+- Focused on long-term brand building rather than short-term experimentation
+
+Section: How we may support brands
+Depending on readiness and alignment, Tony’s Delight USA may support brands with:
+
+Market entry strategy
+- U.S. market positioning and channel strategy
+- Product-market fit assessment
+- Pricing and go-to-market considerations
+
+Distribution and logistics guidance
+- Import and distribution pathway guidance
+- Wholesale and distributor introductions
+- Storage, fulfillment, and logistics coordination discussions
+
+Branding and positioning
+- U.S.-focused branding and messaging feedback
+- Packaging and labeling considerations for the U.S. market
+- Category and competitive landscape insights
+
+Amazon and e-commerce enablement
+- Amazon FBA setup guidance
+- Listing structure and launch planning
+- Channel prioritization and sequencing
+
+Section: How we work
+We approach brand partnerships thoughtfully and selectively. Our focus is on building sustainable, compliant, and scalable pathways into the U.S. market rather than rapid or transactional launches.
+
+Section: Getting in touch
+International brands interested in exploring U.S. market entry can reach out for an initial discussion.
+
+Contact:
+Email: info@tonysdelight.com
+Link to Contact page: /contact
+
+Important wording rules
+- Do NOT name or reference any specific brands or examples.
+- Do NOT guarantee outcomes or services.
+- Keep language informational and future-facing.
+- Avoid legal or regulatory promises.
+
+Verification
+1) Confirm /for-brands loads correctly.
+2) Confirm header and footer links are present.
+3) Confirm no existing pages or social links were removed.
+4) Confirm mobile and desktop layouts remain unchanged.
+
+Deliverable
+After completing, provide:
+1) Files created or edited
+2) A brief summary of what was added
+3) Confirmation that no other changes were made
